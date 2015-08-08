@@ -1,0 +1,9 @@
+{{#each model as |img|}}
+
+  <img src="{{img.src}}" alt="" />
+  <p>{{img.caption}}</p>
+  {{#each img.tags as |tag|}}
+    <p>{{tag}}</p>
+  {{/each}}
+
+{{/each}}
