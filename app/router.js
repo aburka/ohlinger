@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('tattoo', function() {});
+  this.route('art', function() {});
+  this.route('about');
+  this.route('contact');
+  this.route('store');
 });
 
 export default Router;
