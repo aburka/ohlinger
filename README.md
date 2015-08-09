@@ -1,7 +1,6 @@
 # Ohlinger
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ohlinger.com is the personal website of visual artist JJ Ohlinger.
 
 ## Prerequisites
 
@@ -15,19 +14,19 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/aburka/ohlinger` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
 
 ## Running / Development
 
-* `ember server`
+* `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
+* `ember g <blueprint> <name>` to generate blueprints with Ember CLI
 
 ### Running Tests
 
@@ -41,13 +40,13 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+
 
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://www.ember-cli.com/)
+* [photo swipe](http://photoswipe.com/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
