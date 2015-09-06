@@ -1,4 +1,9 @@
-<h1>Tattoo index!</h1>
+<ul class="nav nav-tabs nav-justified">
+  <li role="presentation" class="nav-tab">{{#link-to 'tattoo.bg'}}Black & Gray{{/link-to}}</li>
+  <li role="presentation" class="nav-tab">{{#link-to 'tattoo.color'}}Color{{/link-to}}</li>
+  <li role="presentation" class="nav-tab">{{#link-to 'tattoo.dots'}}Dot Work{{/link-to}}</li>
+  <li role="presentation" class="nav-tab">{{#link-to 'tattoo.flash'}}Flash & Drawings{{/link-to}}</li>
+</ul>
 <div class="image-display-container">
   {{image-display model=model}}
 </div>

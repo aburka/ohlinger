@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames:["image-item"],
+  classNames:["row"],
 
-  tagName: "li"
+  tagName: "div"
 });

@@ -1,0 +1,21 @@
+body {
+  background-color: #8B0000;
+}
+
+.app-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 20px 20px 40px 20px;
+  background-color: #F7F7F7;
+}
+
+/* Navigation */
+
+.nav {
+ margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
