@@ -1,13 +1,16 @@
+<div class="row">
 {{#each model as |img|}}
-  <div class="col-xs-6 col-med-6">
-    <a class="thumbnail">
-    <img src="{{img.src}}" alt="" />
-    <div class="caption">{{img.caption}}
-      {{#each img.tags as |tag|}}
-        <p>{{tag}}</p>
-      {{/each}}
-    </div>
-    </a>
+
+  <div class="col-xs-6 col-med-4">
+    {{#link-to 'tattoo.show' img class="thumbnail"}}
+      <img src="{{img.src}}" alt="" />
+      <div class="caption">{{img.caption}}
+        {{#each img.tags as |tag|}}
+          <p>{{tag}}</p>
+        {{/each}}
+      </div>
+    {{/link-to}}
   </div>
 
 {{/each}}
+</div>
