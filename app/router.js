@@ -12,16 +12,17 @@ Router.map(function() {
     this.route('dots');
     this.route('realism');
     this.route('illustration');
-    this.route('show', {path: '/:id'});
+    this.route('show', {path: '/:tag'});
     this.route('all');
   });
   this.route('art', function() {});
-  this.route('contact');
   this.route('store');
   this.route('about', function() {
     this.route('resume');
+    this.route('contact');
     this.route('press');
   });
+  this.route('events');
 });
 
 export default Router;
