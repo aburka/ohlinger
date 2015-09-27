@@ -1,21 +1,93 @@
 body {
   background-color: #8B0000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .app-container {
   max-width: 1150px;
   margin: 0 auto;
   padding: 20px 20px 40px 20px;
-  background-color: #F7F7F7;
+  background-color: #F0F0F0;
+}
+
+a,
+a:visited  {
+  font: "Roboto";
+  font-weight: 900;
+  color: #000;
+}
+
+a:hover,
+a:active {
+  color: #8B0000;
+}
+
+.btn {
+  background-color: #8B0000;
+  border: 1px solid #8B0000;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #7F0000;
+  border: 1px solid #7F0000;
 }
 
 /* Navigation */
 
 .nav {
  margin-bottom: 15px;
+
+}
+
+li.nav-tab {
+  background-color: #f0f0f0;
+}
+
+li.nav-tab:hover {
+  background-color: #fff;
+}
+
+.active {
+  color: #8B0000;
+  background-color: #873443;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* jumbotron */
+
+.jumbotron {
+  background-image: url(../images/jj.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* Index tattoo thumbnails */
+.thumbnail {
+  background-color: #FFF;
+}
+
+.thumbnail:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  text-align: center;
+}
+
+h3 {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3:hover {
+  text-decoration: underline;
 }

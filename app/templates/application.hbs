@@ -1,12 +1,47 @@
 <div class="app-container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">JJ Ohlinger</a>
+      </div>
 
-<ul class="nav nav-tabs nav-justified">
-  <li role="presentation" class="nav-tab">{{#link-to 'index'}}Home{{/link-to}}</li>
-  <li role="presentation" class="nav-tab">{{#link-to 'about'}}Meet JJ{{/link-to}}</li>
-  <li role="presentation" class="nav-tab">{{#link-to 'events'}}Upcoming Events{{/link-to}}</li>
-  <li role="presentation" class="nav-tab">{{#link-to 'store'}}Store{{/link-to}}</li>
-  <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}Paintings & Drawings{{/link-to}}</li>
-</ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>{{#link-to 'about'}}Meet JJ{{/link-to}}</li>
+              <li>{{#link-to 'about.index'}}Artist Statement{{/link-to}}</li>
+              <li>{{#link-to 'about.resume'}}Resume{{/link-to}}</li>
+              <li>{{#link-to 'about.press'}}Press{{/link-to}}</li>
+              <li>{{#link-to 'about.contact'}}Make an Appointment{{/link-to}}</li>
+            </ul>
+          </li>
+          <li>{{#link-to 'events'}}Upcoming Events{{/link-to}}</li>
+          <li>{{#link-to 'store'}}Store{{/link-to}}</li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Paintings & Drawings <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}Subway Paintings{{/link-to}}</li>
+              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}Temporary Permanence{{/link-to}}</li>
+              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}Masks{{/link-to}}</li>
+              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}The Pile Project{{/link-to}}</li>
+              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}Artistic Identity{{/link-to}}</li>
+              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}Other{{/link-to}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
 {{outlet}}
 </div>
