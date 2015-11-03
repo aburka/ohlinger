@@ -23,6 +23,10 @@ Router.map(function() {
     this.route('press');
   });
   this.route('events');
+  this.route('admin', function() {
+    this.route('upload');
+  });
+  this.route('sessions');
 });
 
 export default Router;
