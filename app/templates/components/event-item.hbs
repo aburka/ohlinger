@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="../images/jj.jpg">
@@ -33,13 +33,13 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 
-{{!-- {{#each model do |event|}}
+{{#each model as |event|}}
   {{event.image}}
   {{event.title}}
   {{event.start_date}} through {{event.end_date}}
   {{event.description}}
-{{/each}} --}}
+{{/each}}
 
 {{yield}}

@@ -9,14 +9,5 @@ export default Ember.Route.extend({
     // edit: function(artwork){
     //   artwork.save();
     // },
-
-    filepick: function(blob){
-      console.log(blob, "blob");
-      var upload = this.store.createRecord('image', {
-        url : blob.url,
-        filename : blob.filename,
-      });
-      upload.save(blob);
-    }
   }
 });

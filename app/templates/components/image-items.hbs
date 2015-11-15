@@ -2,7 +2,7 @@
 {{#each model as |img|}}
   <div class="col-xs-6 col-med-4">
     {{#link-to 'tattoo.show' img class="thumbnail"}}
-      <img src="{{img.image}}" alt="" />
+      <img src="{{img.image.url}}" alt="" />
       <div class="caption">{{img.caption}}
         {{#each img.tags as |tag|}}
           <p>{{tag}}</p>
@@ -10,6 +10,5 @@
       </div>
     {{/link-to}}
   </div>
-
 {{/each}}
 </div>
