@@ -14,18 +14,22 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-    'default-src': "'none' * ",
-    'script-src': "'self' * ",
-    'font-src': "'self' * ",
-    'connect-src': "'self' * ",
-    'img-src': "'self' * ",
-    'style-src': "'self' * ",
-    'media-src': "'self' * "
-  },
+      'default-src': "'self' * ",
+      'script-src': "'self' * ",
+      'font-src': "'self' * ",
+      'connect-src': "'self' * ",
+      'img-src': "'self' * ",
+      'style-src': "'self' * ",
+      'media-src': "'self' * "
+    },
 
     APP: {
+
+    },
+
+    Parse: {
       applicationId: 'ZEnFPixpSlTvgyHxyxmsHtwmFg5HRNOZ2AhIxecm',
-      restApiId: 'CNB7xGqwFvs0R9gqzfKa2bo8zcIBTSps25FZ3STA'
+      jsKey: 'WmwYp0CYRN1fCQK9nLqy9GvSSryZfDPAborMEE1v'
     }
   };
 

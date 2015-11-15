@@ -20,4 +20,7 @@ var app = new EmberApp();
 app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
 app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
 
+app.import(app.bowerDirectory + '/underscore/underscore.js');
+app.import('vendor/parse-1.6.7.min.js');
+
 module.exports = app.toTree();

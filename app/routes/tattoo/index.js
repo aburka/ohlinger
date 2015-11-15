@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(){
-    return this.store.findAll('image');
+    var query = new Parse.Query('Image');
+    return query.find().then(function(results) {
+      return _.invoke(results, 'toJSON');
+    });
   }
 });
