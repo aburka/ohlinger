@@ -39,6 +39,7 @@
     "ember-export-application-global": "^1.0.2",
     "ember-multiselect-checkboxes": "0.5.0",
     "ember-simple-auth": "simplabs/ember-simple-auth",
+    "emberx-select": "2.0.2",
     "photoswipe": "4.1.0"
   }
 }
