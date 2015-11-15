@@ -1,0 +1,11 @@
+{{log model "model"}}
+<img src="{{img.image.url}}" alt="" />
+<div class="caption">
+  <h4>{{img.title}}</h4>
+  {{img.caption}}
+  <p class="tattoo-tag">
+    {{#each img.tags as |tag|}}
+      {{tag}}
+    {{/each}}
+  </p>
+</div>

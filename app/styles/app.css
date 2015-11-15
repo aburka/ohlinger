@@ -135,3 +135,31 @@ footer:before{
   text-align: center;
   font-size: 14px;
 }
+
+/* tattoo thumbnail images */
+.tattoo-index-thumbnail{
+  width: 100%;
+}
+.tattoo-index-thumbnail>img{
+  width: 100%;
+}
+
+ul.tattoo-tags{
+  display: block;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li.tattoo-tag{
+  display: inline;
+  list-style: none;
+}
+
+.tattoo-tag::after{
+  content: ' | ';
+}
+
+.tattoo-tag:last-child::after{
+  content: '';
+}

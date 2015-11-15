@@ -12,7 +12,7 @@ Router.map(function() {
     this.route('dots');
     this.route('realism');
     this.route('illustration');
-    this.route('show', {path: ':id'});
+    this.route('show', {path: ':objectId'});
     this.route('tags', function() {
       this.route('show', {path: ':tag'});
     })

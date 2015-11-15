@@ -1,16 +1,20 @@
 <div class="row">
 {{#each model as |img|}}
-  <div class="col-xs-6 col-med-4">
-    {{#link-to 'tattoo.show' img class="thumbnail"}}
+  <div class="col-xs-4">
+    {{!-- {{#link-to 'tattoo.show' img class="thumbnail"}} --}}
+    <div class="thumbnail tattoo-index-thumbnail">
       <img src="{{img.image.url}}" alt="" />
       <div class="caption">
-        <h4>{{img.title}}</h4>
+        <h4><strong>{{img.title}}</strong></h4>
         {{img.caption}}
-        <p>{{#each img.tags as |tag|}}
-          {{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}
-        {{/each}}</p>
+        <ul class="tattoo-tags">
+          {{#each img.tags as |tag|}}
+            <li class="tattoo-tag text-muted">{{tag}}</li>
+          {{/each}}
+        </ul>
       </div>
-    {{/link-to}}
+    </div>
+    {{!-- {{/link-to}} --}}
   </div>
 {{/each}}
 </div>
