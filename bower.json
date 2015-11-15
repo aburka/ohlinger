@@ -13,7 +13,10 @@
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
     "photoswipe": "4.1.0",
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "pikaday": "~1.4.0",
+    "moment": "~2.10.6",
+    "bootstrap-datepicker": "~1.5.0"
   },
   "resolutions": {
     "ember-data": "~2.1.0"

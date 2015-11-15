@@ -24,8 +24,8 @@ module.exports = function(environment) {
   },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      applicationId: 'ZEnFPixpSlTvgyHxyxmsHtwmFg5HRNOZ2AhIxecm',
+      restApiId: 'CNB7xGqwFvs0R9gqzfKa2bo8zcIBTSps25FZ3STA'
     }
   };
 
@@ -50,7 +50,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/tattoo/';
   }
 
   return ENV;
