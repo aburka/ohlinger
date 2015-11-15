@@ -14,7 +14,7 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-    'default-src': "'none' * ",
+    'default-src': "'self' * ",
     'script-src': "'self' * ",
     'font-src': "'self' * ",
     'connect-src': "'self' * ",
