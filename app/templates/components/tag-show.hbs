@@ -1,4 +1,5 @@
-{{log model}}
+{{log 'model' model}}
+{{log 'tag' tag}}
 
 {{#each model as |tag|}}
   <div class="col-xs-6 col-med-4">
@@ -14,4 +15,5 @@
     {{/link-to}}
   </div>
 {{/each}}
+
 {{yield}}

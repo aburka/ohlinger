@@ -3,10 +3,12 @@
   <div class="col-xs-6 col-med-4">
     {{#link-to 'tattoo.show' img class="thumbnail"}}
       <img src="{{img.image.url}}" alt="" />
-      <div class="caption">{{img.caption}}
-        {{#each img.tags as |tag|}}
-          <p>{{tag}}</p>
-        {{/each}}
+      <div class="caption">
+        <h4>{{img.title}}</h4>
+        {{img.caption}}
+        <p>{{#each img.tags as |tag|}}
+          {{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}
+        {{/each}}</p>
       </div>
     {{/link-to}}
   </div>
