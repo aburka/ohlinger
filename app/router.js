@@ -13,8 +13,8 @@ Router.map(function() {
     this.route('realism');
     this.route('illustration');
     this.route('show', {path: ':id'});
-    this.route('tags', {path: ':tag'}, function() {
-      this.route('show');
+    this.route('tags', function() {
+      this.route('show', {path: ':tag'});
     })
   });
   this.route('art', function() {});
