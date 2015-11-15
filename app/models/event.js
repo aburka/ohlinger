@@ -5,5 +5,5 @@ export default DS.Model.extend({
   start_date: DS.attr('date'),
   end_date: DS.attr('date'),
   description: DS.attr('string'),
-
+  image: DS.attr('file')
 });
