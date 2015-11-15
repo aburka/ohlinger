@@ -1,0 +1,93 @@
+<h1>Upload Image</h1>
+<div class="upload-tattoo">
+  <div class="form-group">
+    <label for="image-name">Image Name</label>
+    {{input type=text value=name class="form-control" id="image-name"}}
+  </div>
+  <div class="form-group">
+    <label for="image-caption">Caption</label>
+    {{input type="textarea" rows=3 value=caption class="form-control" id="image-caption"}}
+  </div>
+  <div class="form-group">
+    <label for="image-file">Select File</label>
+    <input type="file" class="form-control" id="image-file">
+  </div>
+  <div class="form-group">
+    <label>Category:</label>
+    {{#x-select value=category class="form-control" name="categories"}}
+      <option>Select a Category</option>
+      {{#x-option value="Black & Grey"}}Black & Grey{{/x-option}}
+      {{#x-option value="Color"}}Color{{/x-option}}
+      {{#x-option value="Dotwork"}}Dotwork{{/x-option}}
+      {{#x-option value="Illustration"}}Illustration{{/x-option}}
+      {{#x-option value="Realistic"}}Realistic{{/x-option}}
+    {{/x-select}}
+  </div>
+  <div class="form-group">
+    <label>Tags:</label>
+      {{#x-select value=tags multiple=true class="form-control"}}
+        {{#x-option value="floral"}}floral{{/x-option}}
+        {{#x-option value="botanical"}}botanical{{/x-option}}
+        {{#x-option value="bird"}}bird{{/x-option}}
+        {{#x-option value="space"}}space{{/x-option}}
+        {{#x-option value="black line"}}black line{{/x-option}}
+        {{#x-option value="illustration"}}illustration{{/x-option}}
+        {{#x-option value="mandala"}}mandala{{/x-option}}
+        {{#x-option value="dot work"}}dot work{{/x-option}}
+        {{#x-option value="quirky"}}quirky{{/x-option}}
+        {{#x-option value="grateful dead"}}grateful dead{{/x-option}}
+        {{#x-option value="tree"}}tree{{/x-option}}
+        {{#x-option value="portrait"}}portrait{{/x-option}}
+        {{#x-option value="insect"}}insect{{/x-option}}
+        {{#x-option value="animal"}}animal{{/x-option}}
+        {{#x-option value="color"}}color{{/x-option}}
+        {{#x-option value="black and grey"}}black and grey{{/x-option}}
+        {{#x-option value="lettering"}}lettering{{/x-option}}
+        {{#x-option value="asian inspired"}}asian inspired{{/x-option}}
+        {{#x-option value="nautical"}}nautical{{/x-option}}
+        {{#x-option value="trash polka"}}trash polka{{/x-option}}
+        {{#x-option value="food & drink"}}food & drink{{/x-option}}
+        {{#x-option value="scifi"}}scifi{{/x-option}}
+        {{#x-option value="fine art inspired"}}fine art inspired{{/x-option}}
+        {{#x-option value="skull"}}skull{{/x-option}}
+        {{#x-option value="pin up"}}pin up{{/x-option}}
+        {{#x-option value="ocean"}}ocean{{/x-option}}
+        {{#x-option value="religious"}}religious{{/x-option}}
+        {{#x-option value="science"}}science{{/x-option}}
+        {{#x-option value="eye"}}eye{{/x-option}}
+        {{#x-option value="comic"}}comic{{/x-option}}
+        {{#x-option value="patriotic"}}patriotic{{/x-option}}
+        {{#x-option value="cover up"}}cover up{{/x-option}}
+        {{#x-option value="egyptian inspired"}}egyptian inspired{{/x-option}}
+        {{#x-option value="native american inspired"}}native american inspired{{/x-option}}
+        {{#x-option value="anatomical"}}anatomical{{/x-option}}
+        {{#x-option value="anchor"}}anchor{{/x-option}}
+        {{#x-option value="sports"}}sports{{/x-option}}
+        {{#x-option value="heart"}}heart{{/x-option}}
+        {{#x-option value="realism"}}realism{{/x-option}}
+        {{#x-option value="geometric"}}geometric{{/x-option}}
+        {{#x-option value="blackwork"}}blackwork{{/x-option}}
+        {{#x-option value="American Traditional"}}American Traditional{{/x-option}}
+        {{#x-option value="knotwork"}}knotwork{{/x-option}}
+        {{#x-option value="tiny"}}tiny{{/x-option}}
+      {{/x-select}}
+  </div>
+
+  {{!-- <div class="checkbox">
+    <label>Select Tags:</label>
+    <label>
+      {{input type="checkbox"}}Tag Example
+    </label>
+    <label>
+      {{input type="checkbox"}}Tag Example
+    </label>
+    <label>
+      {{input type="checkbox"}}Tag Example
+    </label>
+    <label>
+      {{input type="checkbox"}}Tag Example
+    </label>
+  </div> --}}
+  {{!-- {{multiselect-checkboxes options=taglist}} --}}
+  <button class="btn btn-primary">Submit</button>
+</div>
