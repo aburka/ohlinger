@@ -12,8 +12,10 @@ Router.map(function() {
     this.route('dots');
     this.route('realism');
     this.route('illustration');
-    this.route('show', {path: '/:tag'});
-    this.route('all');
+    this.route('show', {path: ':id'});
+    this.route('tags', {path: ':tag'}, function() {
+      this.route('show');
+    })
   });
   this.route('art', function() {});
   this.route('store');
