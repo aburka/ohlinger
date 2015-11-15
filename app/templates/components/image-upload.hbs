@@ -14,63 +14,63 @@
   </div>
   <div class="form-group">
     <label>Category:</label>
-    <select class="form-control" name="categories">
+    {{#x-select value=category class="form-control" name="categories"}}
       <option>Select a Category</option>
-      <option>Black & Grey</option>
-      <option>Color</option>
-      <option>Dotwork</option>
-      <option>Illustration</option>
-      <option>Realistic</option>
-    </select>
+      {{#x-option value="Black & Grey"}}Black & Grey{{/x-option}}
+      {{#x-option value="Color"}}Color{{/x-option}}
+      {{#x-option value="Dotwork"}}Dotwork{{/x-option}}
+      {{#x-option value="Illustration"}}Illustration{{/x-option}}
+      {{#x-option value="Realistic"}}Realistic{{/x-option}}
+    {{/x-select}}
   </div>
   <div class="form-group">
     <label>Tags:</label>
-      <select multiple class="form-control">
-        <option>floral</option>
-        <option>botanical</option>
-        <option>bird</option>
-        <option>space</option>
-        <option>black line</option>
-        <option>illustration</option>
-        <option>mandala</option>
-        <option>dot work</option>
-        <option>quirky</option>
-        <option>grateful dead</option>
-        <option>tree</option>
-        <option>portrait</option>
-        <option>insect</option>
-        <option>animal</option>
-        <option>color</option>
-        <option>black and grey</option>
-        <option>lettering</option>
-        <option>asian inspired</option>
-        <option>nautical</option>
-        <option>trash polka</option>
-        <option>food & drink</option>
-        <option>scifi</option>
-        <option>fine art inspired</option>
-        <option>skull</option>
-        <option>pin up</option>
-        <option>ocean</option>
-        <option>religious</option>
-        <option>science</option>
-        <option>eye</option>
-        <option>comic</option>
-        <option>patriotic</option>
-        <option>cover up</option>
-        <option>egyptian inspired</option>
-        <option>native american inspired</option>
-        <option>anatomical</option>
-        <option>anchor</option>
-        <option>sports</option>
-        <option>heart</option>
-        <option>realism</option>
-        <option>geometric</option>
-        <option>blackwork</option>
-        <option>American Traditional</option>
-        <option>knotwork</option>
-        <option>tiny</option>
-      </select>
+      {{#x-select value=tags multiple=true class="form-control"}}
+        {{#x-option value="floral"}}floral{{/x-option}}
+        {{#x-option value="botanical"}}botanical{{/x-option}}
+        {{#x-option value="bird"}}bird{{/x-option}}
+        {{#x-option value="space"}}space{{/x-option}}
+        {{#x-option value="black line"}}black line{{/x-option}}
+        {{#x-option value="illustration"}}illustration{{/x-option}}
+        {{#x-option value="mandala"}}mandala{{/x-option}}
+        {{#x-option value="dot work"}}dot work{{/x-option}}
+        {{#x-option value="quirky"}}quirky{{/x-option}}
+        {{#x-option value="grateful dead"}}grateful dead{{/x-option}}
+        {{#x-option value="tree"}}tree{{/x-option}}
+        {{#x-option value="portrait"}}portrait{{/x-option}}
+        {{#x-option value="insect"}}insect{{/x-option}}
+        {{#x-option value="animal"}}animal{{/x-option}}
+        {{#x-option value="color"}}color{{/x-option}}
+        {{#x-option value="black and grey"}}black and grey{{/x-option}}
+        {{#x-option value="lettering"}}lettering{{/x-option}}
+        {{#x-option value="asian inspired"}}asian inspired{{/x-option}}
+        {{#x-option value="nautical"}}nautical{{/x-option}}
+        {{#x-option value="trash polka"}}trash polka{{/x-option}}
+        {{#x-option value="food & drink"}}food & drink{{/x-option}}
+        {{#x-option value="scifi"}}scifi{{/x-option}}
+        {{#x-option value="fine art inspired"}}fine art inspired{{/x-option}}
+        {{#x-option value="skull"}}skull{{/x-option}}
+        {{#x-option value="pin up"}}pin up{{/x-option}}
+        {{#x-option value="ocean"}}ocean{{/x-option}}
+        {{#x-option value="religious"}}religious{{/x-option}}
+        {{#x-option value="science"}}science{{/x-option}}
+        {{#x-option value="eye"}}eye{{/x-option}}
+        {{#x-option value="comic"}}comic{{/x-option}}
+        {{#x-option value="patriotic"}}patriotic{{/x-option}}
+        {{#x-option value="cover up"}}cover up{{/x-option}}
+        {{#x-option value="egyptian inspired"}}egyptian inspired{{/x-option}}
+        {{#x-option value="native american inspired"}}native american inspired{{/x-option}}
+        {{#x-option value="anatomical"}}anatomical{{/x-option}}
+        {{#x-option value="anchor"}}anchor{{/x-option}}
+        {{#x-option value="sports"}}sports{{/x-option}}
+        {{#x-option value="heart"}}heart{{/x-option}}
+        {{#x-option value="realism"}}realism{{/x-option}}
+        {{#x-option value="geometric"}}geometric{{/x-option}}
+        {{#x-option value="blackwork"}}blackwork{{/x-option}}
+        {{#x-option value="American Traditional"}}American Traditional{{/x-option}}
+        {{#x-option value="knotwork"}}knotwork{{/x-option}}
+        {{#x-option value="tiny"}}tiny{{/x-option}}
+      {{/x-select}}
   </div>
 
   {{!-- <div class="checkbox">

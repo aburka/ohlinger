@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     var imageInput = this.$('input[type=file]')[0];
     if(imageInput.files.length > 0) {
       var image = new Parse.Object('Image');
-      image.set(this.getProperties('name', 'caption'));
+      image.set(this.getProperties('name', 'caption', 'category', 'tags'));
       var file = imageInput.files[0];
       var imageFile = new Parse.File(image.name, file);
       imageFile.save().then(() => {
