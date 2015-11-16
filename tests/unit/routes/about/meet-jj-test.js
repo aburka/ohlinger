@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:tattoo/bg', 'Unit | Route | tattoo/bg', {
+moduleFor('route:about/meet-jj', 'Unit | Route | about/meet jj', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
