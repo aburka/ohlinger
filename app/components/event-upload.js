@@ -17,5 +17,11 @@ export default Ember.Component.extend({
         console.error(error);
       });
     }
+  },
+
+  actions: {
+    submitEvent() {
+      this.sendAction('submitEvent');
+    }
   }
 });
