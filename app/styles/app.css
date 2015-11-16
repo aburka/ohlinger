@@ -88,13 +88,14 @@ h4 {
 }
 
 /* Index tattoo thumbnails */
-.tattoo-thumbnail>img:hover {
+/*.tattoo-thumbnail>img:hover {
   border: 1px solid #8B0000;
   transition: .2s;
-}
+}*/
 
 .tattoo-thumbnail>img {
-  max-width: 100%;
+  width: 90%;
+  margin-left: 5%;
 }
 
 
