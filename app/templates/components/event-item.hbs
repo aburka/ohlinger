@@ -1,16 +1,18 @@
 <div class="row">
-  {{#each model as |event|}}
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{{event.image.url}}">
-        <div class="caption">
-          <h2>{{event.title}}</h2>
-          <p>{{event.start_date.iso}} through {{event.end_date.iso}}</p>
-          <p>{{event.description}}</p>
+  {{#masonry-grid}}
+    {{#each model as |event|}}
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="{{event.image.url}}">
+          <div class="caption">
+            <h2>{{event.title}}</h2>
+            <p>{{event.start_date.iso}} through {{event.end_date.iso}}</p>
+            <p>{{event.description}}</p>
+          </div>
         </div>
       </div>
-    </div>
-  {{/each}}
+    {{/each}}
+  {{/masonry-grid}}
 </div>
 
 {{yield}}
