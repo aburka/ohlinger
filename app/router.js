@@ -17,7 +17,14 @@ Router.map(function() {
       this.route('show', {path: ':tag'});
     });
   });
-  this.route('art', function() {});
+  this.route('art', function() {
+    this.route('subway-paintings');
+    this.route('temporary-permanence');
+    this.route('masks');
+    this.route('pile-project');
+    this.route('artistic-identity');
+    this.route('other');
+  });
   this.route('store');
   this.route('about', function() {
     this.route('resume');
