@@ -4,7 +4,8 @@
     "window",
     "-Promise",
     "Parse",
-    "_"
+    "_",
+    "$"
   ],
   "browser": true,
   "boss": true,
