@@ -27,6 +27,11 @@ module.exports = function(environment) {
 
     },
 
+    'ember-simple-auth': {
+      routeAfterAuthentication: 'admin',
+      routeIfAlreadyAuthenticated: 'admin'
+    },
+
     Parse: {
       applicationId: 'ZEnFPixpSlTvgyHxyxmsHtwmFg5HRNOZ2AhIxecm',
       jsKey: 'WmwYp0CYRN1fCQK9nLqy9GvSSryZfDPAborMEE1v'
