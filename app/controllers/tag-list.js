@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
     "animal",
     "asian inspired",
     "bird",
-    "black and gray",
+    "black and grey",
     "black line",
     "blackwork",
     "botanical",
