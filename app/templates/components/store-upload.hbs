@@ -1,0 +1,26 @@
+<h1>Add New Item to Shop</h1>
+<div class="upload-store">
+  <div class="form-group">
+    <label for="product-tile">Title</label>
+    {{input value=title class="form-control" id="product-name"}}
+  </div>
+  <div class="form-group">
+    <label for="product-price">Price</label>
+    {{input value=price class="form-control" id="product-price"}}
+  </div>
+  <div class="form-group">
+    <label for="product-description">Description</label>
+    {{textarea value=description class="form-control" id="product-description"}}
+  </div>
+  <div class="form-group">
+    <label for="purchase-instructions">Purchase instructions</label>
+    {{textarea value=purchase class="form-control" id="purchase-instructions"}}
+  </div>
+  <div class="form-group">
+    <label for="product-image-file">Attach An Image</label>
+    {{input type="file" value=file class="form-control" id="product-image-file"}}
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</div>
+
+{{yield}}

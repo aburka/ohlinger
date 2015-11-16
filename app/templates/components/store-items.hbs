@@ -1,0 +1,19 @@
+<div class="row">
+  {{#masonry-grid}}
+    {{#each model as |product|}}
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="{{product.image.url}}">
+          <div class="caption">
+            <h2>{{product.title}}</h2>
+            <p>{{product.description}}</p>
+            <p>To purchase: {{product.purchase}}</p>
+            <p class="text-muted">{{product.price}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{/masonry-grid}}
+</div>
+
+{{yield}}
