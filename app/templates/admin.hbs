@@ -1,36 +1,9 @@
 <div class="row">
-
-
-<div class="col-sm-4 col-md-6">
-  {{image-upload}}
+  <div class="col-sm-4 col-md-6">
+    {{image-upload}}
+  </div>
+  <div class="col-sm-4 col-md-6">
+    {{event-upload}}
+  </div>
 </div>
-
-<div class="col-sm-4 col-md-6">
-<h1>Add New Event</h1>
-<div class="upload-tattoos">
-  <div class="form-group">
-    <label for="event-tile">Event Name</label>
-    {{input type=text value=title class="form-control" id="event-name"}}
-  </div>
-  <div class="form-group">
-    <label for="start-date">Start Date</label>
-    {{bootstrap-datepicker placeholder="Click to Select Start Date" class="form-control" id="start-date"}}
-  </div>
-  <div class="form-group">
-    <label for="end-date">End Date</label>
-    {{bootstrap-datepicker placeholder="Click to Select End Date" class="form-control" id="end-date"}}
-  </div>
-  <div class="form-group">
-    <label for="event-desc">Description</label>
-    {{input type=text value=title class="form-control" id="event-desc"}}
-  </div>
-  <div class="form-group">
-    <label for="event-image-file">Attach An Image</label>
-    {{input type="file" value=file class="form-control" id="event-image-file"}}
-  </div>
-  <button class="btn btn-primary" {{action 'submit-event'}}>Submit</button>
-</div>
-</div>
-</div>
-
 {{outlet}}
