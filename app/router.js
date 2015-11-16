@@ -36,6 +36,7 @@ Router.map(function() {
     this.route('upload');
   });
   this.route('sessions');
+  this.route('login');
 });
 
 export default Router;
