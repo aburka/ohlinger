@@ -122,27 +122,6 @@ h3:hover {
   text-decoration: none;
 }
 
-/* footer */
-
-footer {
-  margin-top: 50px;
-}
-
-footer:before{
-  content: '';
-  height: 1px;
-  background-color: rgba(225, 225, 225, .5);
-  display: block;
-}
-
-.footer {
-  height: 150px;
-  padding: 25px;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* tattoo thumbnail images */
 .tattoo-index-thumbnail{
   width: 100%;
 }
@@ -169,6 +148,58 @@ li.tattoo-tag{
 .tattoo-tag:last-child::after{
   content: '';
 }
+
+ul.tattoo-tag-list{
+  list-style: none;
+}
+ul.tattoo-tag-list>li{
+  padding: 5px;
+}
+
+ul.tattoo-tag-list>li>a:hover{
+  font-weight: bolder;
+}
+
+.image-show{
+  max-width: 100%;
+  text-align: center;
+}
+
+.image-show-caption>h4{
+  font-weight: bolder;
+}
+ul.image-show-tags{
+  margin-left: 0;
+  padding: 10px 0 0 0;
+}
+
+li.tattoo-tag>a{
+  color: #777;
+  padding-top: 10px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 50px;
+}
+
+footer:before{
+  content: '';
+  height: 1px;
+  background-color: rgba(225, 225, 225, .5);
+  display: block;
+}
+
+.footer {
+  height: 150px;
+  padding: 25px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* tattoo thumbnail images */
+
 /* Admin */
 
 .btn.btn-primary.cancel-button{
