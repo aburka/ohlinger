@@ -23,13 +23,18 @@ a:active {
   text-decoration: none;
 }
 
-.btn {
+.btn.btn-primary {
   background-color: #8B0000;
   border: 1px solid #8B0000;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-.btn:hover {
+.btn.btn-primary:hover {
+  background-color: #7F0000;
+  border: 1px solid #7F0000;
+}
+
+.btn.btn-primary:active {
   background-color: #7F0000;
   border: 1px solid #7F0000;
 }
@@ -163,4 +168,16 @@ li.tattoo-tag{
 
 .tattoo-tag:last-child::after{
   content: '';
+}
+/* Admin */
+
+.btn.btn-primary.cancel-button{
+  background-color: #777;
+  border: #666;
+}
+.btn.btn-primary.cancel-button:hover{
+  background-color: #666;
+}
+.btn.btn-primary.cancel-button:active{
+  background-color: #000;
 }

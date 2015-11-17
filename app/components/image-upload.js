@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'form',
+
   submit(e) {
     e.preventDefault();
     var imageInput = this.$('input[type=file]')[0];
@@ -16,6 +17,18 @@ export default Ember.Component.extend({
       }, (error) => {
         console.error(error);
       });
+    }
+    this.set("isHiden", true);
+  },
+
+  isHidden: true,
+
+  actions: {
+    openUpload(){
+      this.set("isHidden", false);
+    },
+    cancelUpload(){
+      this.set("isHidden", true);
     }
   }
 });

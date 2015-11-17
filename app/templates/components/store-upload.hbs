@@ -1,4 +1,7 @@
-<h1>Add New Item to Shop</h1>
+<h2 {{action "openUpload"}} class="upload-header"><i class="fa fa-plus"></i> Add New Item to the Store</h2>
+{{#if isHidden}}
+<hr>
+{{else}}
 <div class="upload-store">
   <div class="form-group">
     <label for="product-tile">Title</label>
@@ -20,7 +23,9 @@
     <label for="product-image-file">Attach An Image</label>
     {{input type="file" value=file class="form-control" id="product-image-file"}}
   </div>
-  <button class="btn btn-primary">Submit</button>
+  <button class="btn btn-primary submit-button">Submit</button>
+  <button {{action "cancelUpload"}} class="btn btn-primary cancel-button">Cancel</button>
+  <hr>
 </div>
-
+{{/if}}
 {{yield}}

@@ -17,5 +17,16 @@ export default Ember.Component.extend({
         console.error(error);
       });
     }
+  },
+  
+  isHidden: true,
+
+  actions: {
+    openUpload(){
+      this.set("isHidden", false);
+    },
+    cancelUpload(){
+      this.set("isHidden", true);
+    }
   }
 });
