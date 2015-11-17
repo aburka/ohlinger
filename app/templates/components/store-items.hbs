@@ -1,9 +1,10 @@
 <div class="row">
+{{#gallery-modal images=model as |openGallery|}}
   {{#masonry-grid}}
     {{#each model as |product|}}
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="{{product.image.url}}">
+          <img src="{{product.image.url}}" {{action openGallery index}} />
           <div class="caption">
             <h2>{{product.title}}</h2>
             <p>{{product.description}}</p>
@@ -14,6 +15,7 @@
       </div>
     {{/each}}
   {{/masonry-grid}}
+{{/gallery-modal}}
 </div>
 
 {{yield}}
