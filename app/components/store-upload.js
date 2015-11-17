@@ -15,8 +15,9 @@ export default Ember.Component.extend({
         return image.save();
       }, (error) => {
         console.error(error);
-      });
+      }.bind(this));
     }
+    this.set('isHidden', true);
   },
 
   isHidden: true,
