@@ -2,20 +2,20 @@
   {{#masonry-grid}}
     {{#each model as |img|}}
       <div class="col-sm-6 col-md-4">
-        {{#link-to 'tattoo.show' img class="thumbnail"}}
-        <div class="tattoo-index-thumbnail">
+        <div class="tattoo-index-thumbnail thumbnail">
+        {{#link-to 'tattoo.show' img}}
           <img src="{{img.image.url}}" alt="" />
+        {{/link-to}}
           <div class="caption">
             <h4><strong>{{img.title}}</strong></h4>
             {{img.caption}}
             <ul class="tattoo-tags">
               {{#each img.tags as |tag|}}
-                <li class="tattoo-tag text-muted">{{tag}}</li>
+                <li class="tattoo-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
               {{/each}}
             </ul>
           </div>
         </div>
-        {{/link-to}}
       </div>
     {{/each}}
   {{/masonry-grid}}
