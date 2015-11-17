@@ -1,11 +1,17 @@
-{{log model "model"}}
-<img src="{{img.image.url}}" alt="" />
-<div class="caption">
-  <h4>{{img.title}}</h4>
-  {{img.caption}}
-  <p class="tattoo-tag">
-    {{#each img.tags as |tag|}}
-      {{tag}}
-    {{/each}}
-  </p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 image-show">
+    <img src="{{model.image.url}}" alt="" class="image-show-img"/>
+    <div class="caption image-show-caption">
+      <h4>{{model.title}}</h4>
+      <p>{{model.caption}}</p>
+      <p class="tattoo-tag">
+        <ul class="image-show-tags">
+          {{#each model.tags as |tag|}}
+            <li class="tattoo-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+
+  </div>
 </div>
