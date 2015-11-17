@@ -2,13 +2,17 @@
   <div class="col-xs-6 col-med-4">
     {{!-- {{#link-to 'tattoo.show' img class="thumbnail"}} --}}
     <div class="thumbnail">
-      <img src="{{img.image.url}}" alt="" />
+      {{#link-to 'tattoo.show' img}}
+        <img src="{{img.image.url}}" alt="" />
+      {{/link-to}}
       <div class="caption">
         <h4>{{img.title}}</h4>
         {{img.caption}}
-        <p>{{#each img.tags as |tag|}}
-          {{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}
-        {{/each}}</p>
+        <ul class="tattoo-tags">
+          {{#each img.tags as |tag|}}
+            <li class="tattoo-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
       </div>
     </div>
     {{!-- {{/link-to}} --}}
