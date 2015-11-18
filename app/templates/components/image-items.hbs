@@ -1,13 +1,14 @@
 <div class="row">
+{{#gallery-modal images=model as |openGallery|}}
   {{#masonry-grid}}
     {{#each model as |img|}}
       <div class="col-sm-6 col-md-4">
         <div class="tattoo-index-thumbnail thumbnail">
-        {{#link-to 'tattoo.show' img}}
-          <img src="{{img.image.url}}" alt="" />
-        {{/link-to}}
+          <img src="{{img.image.url}}" alt="" {{action openGallery index}} />
           <div class="caption">
-            <h4><strong>{{img.title}}</strong></h4>
+            {{#link-to 'tattoo.show' img}}
+              <h4><strong>{{img.title}}</strong></h4>
+            {{/link-to}}
             {{img.caption}}
             <ul class="tattoo-tags">
               {{#each img.tags as |tag|}}
@@ -19,4 +20,5 @@
       </div>
     {{/each}}
   {{/masonry-grid}}
+{{/gallery-modal}}
 </div>
