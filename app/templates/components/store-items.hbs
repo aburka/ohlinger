@@ -1,7 +1,7 @@
 <div class="row">
 {{#gallery-modal images=model as |openGallery|}}
   {{#masonry-grid}}
-    {{#each model as |product|}}
+    {{#each model as |product index|}}
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <img src="{{product.thumbnail.url}}" {{action openGallery index}} />
