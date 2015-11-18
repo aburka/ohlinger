@@ -1,24 +1,24 @@
 {{#gallery-modal images=model as |openGallery|}}
-{{#masonry-grid}}
-  {{#each model as |img index|}}
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{{img.image.url}}" alt="" {{action openGallery index}} />
-        <div class="caption">
-          {{#link-to 'tattoo.show' img}}
-            <h4>{{img.title}}</h4>
-          {{/link-to}}
-          {{img.caption}}
-          <ul class="tattoo-tags">
-            {{#each img.tags as |tag|}}
-              <li class="tattoo-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
-            {{/each}}
-          </ul>
+  {{#masonry-grid}}
+    {{#each model as |img index|}}
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="{{img.thumbnail.url}}" alt="" {{action openGallery index}} />
+          <div class="caption">
+            {{#link-to 'tattoo.show' img}}
+              <h4>{{img.title}}</h4>
+            {{/link-to}}
+            {{img.caption}}
+            <ul class="tattoo-tags">
+              {{#each img.tags as |tag|}}
+                <li class="tattoo-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
+              {{/each}}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  {{/each}}
-{{/masonry-grid}}
+    {{/each}}
+  {{/masonry-grid}}
 {{/gallery-modal}}
 
 {{yield}}

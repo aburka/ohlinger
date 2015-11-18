@@ -4,17 +4,13 @@
     {{#each model as |img|}}
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-        {{!-- {{#link-to 'art.show' img class="thumbnail"}} --}}
-        <div class="art-index-thumbnail">
-          <img src="{{img.image.url}}" alt="" {{action openGallery index}} />
+          <img src="{{img.thumbnail.url}}" alt="" {{action openGallery index}} />
           <div class="caption">
             <h4><strong>{{img.title}}</strong></h4>
             {{img.caption}}
             <p class="text-muted">{{img.category}}</p>
           </div>
         </div>
-        {{!-- {{/link-to}} --}}
-          </div>
       </div>
     {{/each}}
   {{/masonry-grid}}

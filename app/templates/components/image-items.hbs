@@ -4,7 +4,7 @@
     {{#each model as |img|}}
       <div class="col-sm-6 col-md-4">
         <div class="tattoo-index-thumbnail thumbnail">
-          <img src="{{img.image.url}}" alt="" {{action openGallery index}} />
+          <img src="{{img.thumbnail.url}}" alt="" {{action openGallery index}} />
           <div class="caption">
             {{#link-to 'tattoo.show' img}}
               <h4><strong>{{img.title}}</strong></h4>

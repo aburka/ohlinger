@@ -4,7 +4,7 @@
     {{#each model as |product|}}
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="{{product.image.url}}" {{action openGallery index}} />
+          <img src="{{product.thumbnail.url}}" {{action openGallery index}} />
           <div class="caption">
             <h2>{{product.title}}</h2>
             <p>{{product.description}}</p>
