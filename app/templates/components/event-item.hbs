@@ -6,7 +6,7 @@
           <img src="{{event.thumbnail.url}}">
           <div class="caption">
             <h2>{{event.title}}</h2>
-            <p>{{event.start_date.iso}} through {{event.end_date.iso}}</p>
+            <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
             <p>{{event.description}}</p>
           </div>
         </div>
@@ -23,7 +23,7 @@
         <img src="{{event.thumbnail.url}}">
         <div class="caption">
           <h2>{{event.title}}</h2>
-          <p>{{event.start_date.iso}} through {{event.end_date.iso}}</p>
+          <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
           <p>{{event.description}}</p>
         </div>
       </div>
