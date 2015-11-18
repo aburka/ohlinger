@@ -5,7 +5,8 @@
     "-Promise",
     "Parse",
     "_",
-    "$"
+    "$",
+    "moment"
   ],
   "browser": true,
   "boss": true,
