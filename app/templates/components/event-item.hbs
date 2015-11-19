@@ -1,18 +1,34 @@
 <div class="row">
   {{#masonry-grid}}
-    {{#each model as |event|}}
+    {{#each model.current as |event|}}
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <img src="{{event.thumbnail.url}}">
           <div class="caption">
             <h2>{{event.title}}</h2>
-            <p>{{event.start_date.iso}} through {{event.end_date.iso}}</p>
+            <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
             <p>{{event.description}}</p>
           </div>
         </div>
       </div>
     {{/each}}
   {{/masonry-grid}}
+
+  <hr />
+  <h1>Past</h1>
+
+  {{#each model.past as |event|}}
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{{event.thumbnail.url}}">
+        <div class="caption">
+          <h2>{{event.title}}</h2>
+          <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
+          <p>{{event.description}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
 </div>
 
 {{yield}}
