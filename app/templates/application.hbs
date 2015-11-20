@@ -27,7 +27,7 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tattoo <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li>{{#link-to 'tattoo.index'}}All Tattoos{{/link-to}}</li>
+              <li>{{#link-to 'tattoo.index'}}<strong>All Tattoos</strong>{{/link-to}}</li>
               <li>{{#link-to 'tattoo.black-and-grey'}}Black & Grey{{/link-to}}</li>
               <li>{{#link-to 'tattoo.color'}}Color{{/link-to}}</li>
               <li>{{#link-to 'tattoo.dotwork'}}Dotwork{{/link-to}}</li>
@@ -42,7 +42,7 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Paintings & Drawings <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}All Paintings & Drawings{{/link-to}}</li>
+              <li role="presentation" class="nav-tab">{{#link-to 'art.index'}}<strong>All Paintings & Drawings</strong>{{/link-to}}</li>
               <li role="presentation" class="nav-tab">{{#link-to 'art.subway-paintings'}}Subway Paintings{{/link-to}}</li>
               <li role="presentation" class="nav-tab">{{#link-to 'art.temporary-permanence'}}Temporary Permanence{{/link-to}}</li>
               <li role="presentation" class="nav-tab">{{#link-to 'art.masks'}}Masks{{/link-to}}</li>
@@ -53,6 +53,7 @@
           </li>
 
           {{#if session.isAuthenticated}}
+          <li>{{#link-to 'admin'}}Admin{{/link-to}}</li>
             <li><a {{action 'invalidateSession'}}>Logout</a></li>
           {{/if}}
         </ul>
