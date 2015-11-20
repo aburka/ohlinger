@@ -1,0 +1,40 @@
+<div class="thumbnail">
+  {{#if isHidden}}
+    <img src="{{product.thumbnail.url}}" {{action openGallery index}} />
+    <div class="caption">
+      <h2>{{product.title}}</h2>
+      <p>{{product.description}}</p>
+      <p>To purchase: {{product.purchase}}</p>
+      <p class="text-muted">{{product.price}}</p>
+      {{#if session.isAuthenticated}}
+        <p class="btn btn-primary" role="button" {{action "showEdit"}}>Edit</p>
+        <p class="btn btn-primary" role="button" {{action "deleteItem"}}>Delete</p>
+      {{/if}}
+    </div>
+  {{else}}
+    <div class="edit-store">
+      <div class="form-group">
+        <label for="product-tile">Title</label>
+        {{input value=product.title class="form-control" id="product-name"}}
+      </div>
+      <div class="form-group">
+        <label for="product-price">Price</label>
+        {{input value=product.price class="form-control" id="product-price"}}
+      </div>
+      <div class="form-group">
+        <label for="product-description">Description</label>
+        {{textarea value=product.description class="form-control" id="product-description"}}
+      </div>
+      <div class="form-group">
+        <label for="purchase-instructions">Purchase instructions</label>
+        {{textarea value=product.purchase class="form-control" id="purchase-instructions"}}
+      </div>
+      <div class="form-group">
+        <label for="product-image-file">Attach An Image</label>
+        {{input type="file" value=product.file class="form-control" id="product-image-file"}}
+      </div>
+      <button class="btn btn-primary submit-button">Submit</button>
+      <button {{action "cancelEdit"}} class="btn btn-primary cancel-button">Cancel</button>
+    </div>
+  {{/if}}
+</div>
