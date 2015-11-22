@@ -1,0 +1,99 @@
+/* Tattoo thumbnails on index */
+.tattoo-thumbnail {
+  margin-bottom: 15px;
+}
+
+.tattoo-thumbnail>img {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h3 {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3:hover {
+  color: #8B0000;
+  text-decoration: none;
+}
+
+/* Index of images on tattoo and art pages */
+
+.thumbnail{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+.caption>h4{
+  margin-top: 0;
+}
+
+.image-index-thumbnail{
+  width: 100%;
+}
+.image-index-thumbnail>img{
+  width: 100%;
+  cursor: pointer;
+}
+
+ul.image-tags{
+  display: block;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li.image-tag{
+  display: inline;
+  list-style: none;
+}
+
+.image-tag::after{
+  content: ' | ';
+}
+
+.image-tag:last-child::after{
+  content: '';
+}
+
+li.image-tag>a{
+  color: #777;
+  padding-top: 10px;
+}
+
+/* List of tags on tags/show page */
+
+ul.tattoo-tag-list{
+  list-style: none;
+}
+ul.tattoo-tag-list>li{
+  padding: 5px;
+}
+
+ul.tattoo-tag-list>li>a:hover{
+  font-weight: bolder;
+}
+
+/* Individual show views */
+
+.image-show{
+  max-width: 100%;
+  text-align: center;
+}
+
+.image-show-caption>h4{
+  font-weight: bolder;
+}
+ul.image-show-tags{
+  margin-left: 0;
+  padding: 10px 0 0 0;
+}
