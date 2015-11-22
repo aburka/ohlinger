@@ -3,16 +3,16 @@
   {{#masonry-grid}}
     {{#each model as |img index|}}
       <div class="col-sm-6 col-md-4">
-        <div class="tattoo-index-thumbnail thumbnail">
+        <div class="image-index-thumbnail thumbnail">
           <img src="{{img.thumbnail.url}}" alt="" {{action openGallery index}} />
           <div class="caption">
             {{#link-to 'tattoo.show' img}}
               <h4><strong>{{img.title}}</strong></h4>
             {{/link-to}}
             {{img.caption}}
-            <ul class="tattoo-tags">
+            <ul class="image-tags">
               {{#each img.tags as |tag|}}
-                <li class="tattoo-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
+                <li class="image-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
               {{/each}}
             </ul>
           </div>
