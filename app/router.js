@@ -23,7 +23,8 @@ Router.map(function() {
     this.route('masks');
     this.route('pile-project');
     this.route('artistic-identity');
-    this.route('other');
+    this.route('other-paintings');
+    this.route('other-drawings');
   });
   this.route('store');
   this.route('about', function() {
