@@ -1,3 +1,14 @@
-.upload-image-button-thumbnail {
-  max-width: 60px;
+.upload-image-button {
+  cursor: pointer;
+
+  &-thumbnail {
+    max-width: 60px;
+  }
+
+  &-input {
+    left: -99999px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+  }
 }
