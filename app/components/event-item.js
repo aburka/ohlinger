@@ -11,8 +11,10 @@ export default Ember.Component.extend({
     showEdit(){
       this.set("isHidden", false);
     },
+
     cancelEdit(){
       this.set("isHidden", true);
     }
+
   }
 });
