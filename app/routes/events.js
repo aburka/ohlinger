@@ -17,7 +17,12 @@ export default Ember.Route.extend({
 
         var query = Parse.Query.or(query1, query2);
         return query.find().then(function(results) {
-          return _.invoke(results, 'toJSON');
+          return results.map((r) => {
+            return _.extend({}, r.toJSON(), {
+              start_date: r.get('start_date'),
+              end_date: r.get('end_date')
+            });
+          });
         });
       })(),
 
@@ -32,7 +37,12 @@ export default Ember.Route.extend({
 
         var query = Parse.Query.or(query1, query2);
         return query.find().then(function(results) {
-          return _.invoke(results, 'toJSON');
+          return results.map((r) => {
+            return _.extend({}, r.toJSON(), {
+              start_date: r.get('start_date'),
+              end_date: r.get('end_date')
+            });
+          });
         });
       })()
     });
