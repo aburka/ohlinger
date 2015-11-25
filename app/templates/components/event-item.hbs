@@ -2,7 +2,7 @@
   <img src="{{event.thumbnail.url}}">
   <div class="caption">
     <h2>{{event.title}}</h2>
-    <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
+      <p>{{date-range event.start_date event.end_date}}</p>
     <p>{{event.description}}</p>
     {{#if session.isAuthenticated}}
       {{#if isHidden}}
