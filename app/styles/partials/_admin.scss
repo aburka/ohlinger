@@ -2,13 +2,15 @@
 
 .btn.btn-primary.cancel-button{
   background-color: #777;
-  border: #666;
+  border: 1px solid #666;
 }
 .btn.btn-primary.cancel-button:hover{
   background-color: #666;
+  border: 1px solid #666;
 }
 .btn.btn-primary.cancel-button:active{
   background-color: #000;
+  border: 1px solid #666;
 }
 
 .upload-header{
