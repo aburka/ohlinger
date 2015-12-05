@@ -1,34 +1,36 @@
-<h2 {{action "openUpload"}} class="upload-header"><i class="fa fa-plus"></i> Upload Artwork</h2>
 {{#if isHidden}}
-<hr>
-{{else}}
-<div class="upload-art">
-  <div class="form-group">
-    <label for="art-name">Image Name</label>
-    {{input type=text value=title class="form-control" id="art-name"}}
-  </div>
-  <div class="form-group">
-    <label for="art-caption">Caption</label>
-    {{textarea rows=3 value=caption class="form-control" id="art-caption"}}
-  </div>
-  <div class="form-group">
-    <label for="art-file">Select File</label>
-    <input type="file" class="form-control" id="art-file">
-  </div>
-  <div class="form-group">
-    <label>Category:</label>
-    {{#x-select value=category class="form-control" name="art-categories"}}
-      <option>Select a Category</option>
-      {{#x-option value="Subway Paintings"}}Subway Paintings{{/x-option}}
-      {{#x-option value="Temporary Permanence"}}Temporary Permanence{{/x-option}}
-      {{#x-option value="Masks"}}Masks{{/x-option}}
-      {{#x-option value="The Pile Project"}}The Pile Project{{/x-option}}
-      {{#x-option value="Artistic Identity"}}Artistic Identity{{/x-option}}
-      {{#x-option value="Other"}}Other{{/x-option}}
-    {{/x-select}}
-  </div>
-  <button class="btn btn-primary submit-button">Submit</button>
-  <button {{action "cancelUpload"}} class="btn btn-primary cancel-button">Cancel</button>
+  <h2 {{action "openUpload"}} class="upload-header"><i class="fa fa-plus"></i> Upload Artwork</h2>
   <hr>
-</div>
+{{else}}
+  <h2 {{action "cancelUpload"}} class="upload-header"><i class="fa fa-times"></i> Upload Artwork</h2>
+  <div class="upload-art">
+    <div class="form-group">
+      <label for="art-name">Image Name</label>
+      {{input type=text value=title class="form-control" id="art-name"}}
+    </div>
+    <div class="form-group">
+      <label for="art-caption">Caption</label>
+      {{textarea rows=3 value=caption class="form-control" id="art-caption"}}
+    </div>
+    <div class="form-group">
+      <label for="art-file">Select File</label>
+      <input type="file" class="form-control" id="art-file">
+    </div>
+    <div class="form-group">
+      <label>Category:</label>
+      {{#x-select value=category class="form-control" name="art-categories"}}
+        <option>Select a Category</option>
+        {{#x-option value="Subway Paintings"}}Subway Paintings{{/x-option}}
+        {{#x-option value="Temporary Permanence"}}Temporary Permanence{{/x-option}}
+        {{#x-option value="Masks"}}Masks{{/x-option}}
+        {{#x-option value="The Pile Project"}}The Pile Project{{/x-option}}
+        {{#x-option value="Artistic Identity"}}Artistic Identity{{/x-option}}
+        {{#x-option value="Other"}}Other{{/x-option}}
+      {{/x-select}}
+    </div>
+    <button class="btn btn-primary submit-button">Submit</button>
+    <button {{action "cancelUpload"}} class="btn btn-primary cancel-button">Cancel</button>
+    <hr>
+  </div>
 {{/if}}
+{{yield}}
