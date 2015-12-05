@@ -2,7 +2,7 @@
 {{#gallery-modal images=model as |openGallery|}}
   {{#masonry-grid}}
     {{#each model as |img index|}}
-      <div class="col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-3 col-md-4">
         <div class="image-index-thumbnail thumbnail">
           <img src="{{img.thumbnail.url}}" alt="" {{action openGallery index}} />
           <div class="caption">

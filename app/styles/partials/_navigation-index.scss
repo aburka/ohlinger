@@ -5,6 +5,13 @@
   border: none;
   border-radius: 0;
 }
+.navbar-brand {
+  padding-left: 0;
+}
+
+.navbar-brand>a {
+  color: #8B0000;
+}
 
 .navbar-brand,
 .nav>li {

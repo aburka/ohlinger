@@ -1,43 +1,41 @@
-<div>
-  <div class="thumbnail">
-    <img src="{{event.thumbnail.url}}">
-    <div class="caption">
-      <h2>{{event.title}}</h2>
-      <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
-      <p>{{event.description}}</p>
-      {{#if session.isAuthenticated}}
-        {{#if isHidden}}
-          <p class="btn btn-primary" role="button" {{action "showEdit"}}>Edit</p>
-          <p class="btn btn-primary" role="button" {{action "deleteEvent"}}>Delete</p>
-        {{else}}
-          <div class="upload-event">
-            <div class="form-group">
-              <label for="event-tile">Event Name</label>
-              {{input type=text value=event.title class="form-control" id="event-name"}}
-            </div>
-            <div class="form-group">
-              <label for="start-date">Start Date</label>
-              {{bootstrap-datepicker value=event.start_date class="form-control" id="start-date"}}
-            </div>
-            <div class="form-group">
-              <label for="end-date">End Date</label>
-              {{bootstrap-datepicker value=event.end_date class="form-control" id="end-date"}}
-            </div>
-            <div class="form-group">
-              <label for="event-desc">Description</label>
-              {{input type=text value=event.description class="form-control" id="event-desc"}}
-            </div>
-            <div class="form-group">
-              <label for="event-image-file">Attach An Image</label>
-              {{input type="file" value=event.file class="form-control" id="event-image-file"}}
-            </div>
-            <button class="btn btn-primary submit-button" {{action "editEvent"}}>Submit</button>
-            <button {{action "cancelEdit"}} class="btn btn-primary cancel-button">Cancel</button>
-            <hr>
+<div class="thumbnail">
+  <img src="{{event.thumbnail.url}}">
+  <div class="caption">
+    <h2>{{event.title}}</h2>
+    <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
+    <p>{{event.description}}</p>
+    {{#if session.isAuthenticated}}
+      {{#if isHidden}}
+        <p class="btn btn-primary" role="button" {{action "showEdit"}}>Edit</p>
+        <p class="btn btn-primary" role="button" {{action "deleteEvent"}}>Delete</p>
+      {{else}}
+        <div class="upload-event">
+          <div class="form-group">
+            <label for="event-tile">Event Name</label>
+            {{input type=text value=event.title class="form-control" id="event-name"}}
           </div>
-        {{/if}}
+          <div class="form-group">
+            <label for="start-date">Start Date</label>
+            {{bootstrap-datepicker value=event.start_date class="form-control" id="start-date"}}
+          </div>
+          <div class="form-group">
+            <label for="end-date">End Date</label>
+            {{bootstrap-datepicker value=event.end_date class="form-control" id="end-date"}}
+          </div>
+          <div class="form-group">
+            <label for="event-desc">Description</label>
+            {{input type=text value=event.description class="form-control" id="event-desc"}}
+          </div>
+          <div class="form-group">
+            <label for="event-image-file">Attach An Image</label>
+            {{input type="file" value=event.file class="form-control" id="event-image-file"}}
+          </div>
+          <button class="btn btn-primary submit-button" {{action "editEvent"}}>Submit</button>
+          <button {{action "cancelEdit"}} class="btn btn-primary cancel-button">Cancel</button>
+          <hr>
+        </div>
       {{/if}}
-    </div>
+    {{/if}}
   </div>
 </div>
 
