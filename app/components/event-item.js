@@ -47,6 +47,10 @@ export default Ember.Component.extend({
         this.notifyPropertyChange('model');
       });
       this.set('isHidden', true);
+    },
+
+    deleteEvent() {
+      this.get('onDestroy')(this.get('model'));
     }
   }
 });

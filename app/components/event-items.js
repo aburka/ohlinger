@@ -23,5 +23,13 @@ export default Ember.Component.extend({
       return moment(start_date).isAfter(twelveAM) ||
         moment(end_date).isAfter(midnight);
     });
-  })
+  }),
+
+  actions: {
+    destroy(model) {
+      model.destroy().then(() => {
+        this.get('events').removeObject(model);
+      });
+    }
+  }
 });
