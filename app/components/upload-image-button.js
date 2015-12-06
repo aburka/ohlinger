@@ -22,8 +22,8 @@ export default Ember.Component.extend({
       var imageFile = new Parse.File(file.name, file);
       imageFile.save()
       .then(() => {
-        this.set('value', imageFile.toJSON());
-        this.sendAction('on-upload', imageFile.toJSON());
+        this.set('value', imageFile);
+        this.sendAction('on-upload', imageFile);
       })
       .always(() => {
         this.set('isUploading', false);

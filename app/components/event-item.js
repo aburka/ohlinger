@@ -1,21 +1,11 @@
 import Ember from 'ember';
 
-// whitelist of allowed/used props
-const props = ['title', 'start_date', 'end_date', 'description', 'image',
-  'thumbnail'];
+const props = ['title', 'start_date', 'end_date', 'description', 'image'];
 
 export default Ember.Component.extend({
   classNames: ["col-xs-12 col-sm-3 col-md-4"],
 
-  event: null,
-  "on-save": null,
-
-  title: null,
-  start_date: null,
-  end_date: null,
-  description: null,
-  image: null,
-  thumbnail: null,
+  model: null,
 
   session: Ember.inject.service('session'),
 
@@ -32,12 +22,13 @@ export default Ember.Component.extend({
     },
   },
 
-  resetOnInit: Ember.on('init', function() {
+  didInsertElement() {
     this.resetFromEvent();
-  }),
+  },
 
   resetFromEvent() {
-    this.setProperties(_.pick(this.get('event'), props));
+    let attrs = _.pick(this.get('model.attributes'), props);
+    this.setProperties(attrs);
   },
 
   actions: {
@@ -48,7 +39,14 @@ export default Ember.Component.extend({
     cancelEdit(){
       this.set("isHidden", true);
       this.resetFromEvent();
-    }
+    },
 
+    saveEvent() {
+      let attrs = this.getProperties(props);
+      this.get('model').save(attrs).then(() => {
+        this.notifyPropertyChange('model');
+      });
+      this.set('isHidden', true);
+    }
   }
 });
