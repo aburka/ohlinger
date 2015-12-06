@@ -25,8 +25,11 @@ Router.map(function() {
     this.route('artistic-identity');
     this.route('other-paintings');
     this.route('other-drawings');
+    this.route('show', {path: ':objectId'});
   });
-  this.route('store');
+  this.route('store', function() {
+    this.route('show', {path: ':objectId'});
+  });
   this.route('about', function() {
     this.route('resume');
     this.route('contact');

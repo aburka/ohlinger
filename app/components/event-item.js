@@ -50,7 +50,9 @@ export default Ember.Component.extend({
     },
 
     deleteEvent() {
-      this.get('on-destroy')(this.get('model'));
+      if(confirm("Are you sure you want to delete this item?")) {
+        this.get('on-destroy')(this.get('model'));
+      }
     }
   }
 });

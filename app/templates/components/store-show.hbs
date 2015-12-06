@@ -1,0 +1,39 @@
+<div class="thumbnail">
+  {{#unless isEditing}}
+    <img src="{{invoke (g model 'thumbnail') 'url'}}" alt="" class="image-show-img"/>
+    <div class="caption">
+      <h2>{{g model 'title'}}</h2>
+      <p>{{g model 'description'}}</p>
+      <p>To purchase: {{g model 'purchase'}}</p>
+      <p class="text-muted">{{g model 'price'}}</p>
+      {{#if session.isAuthenticated}}
+        <p class="btn btn-primary" role="button" {{action "edit"}}>Edit</p>
+        <p class="btn btn-primary" role="button" {{action "destroy"}}>Delete</p>
+      {{/if}}
+    </div>
+  {{else}}
+    <div class="edit-store">
+      <div class="form-group">
+        <label for="product-tile">Title</label>
+        {{input value=title class="form-control" id="product-name"}}
+      </div>
+      <div class="form-group">
+        <label for="product-price">Price</label>
+        {{input value=price class="form-control" id="product-price"}}
+      </div>
+      <div class="form-group">
+        <label for="product-description">Description</label>
+        {{textarea value=description class="form-control" id="product-description"}}
+      </div>
+      <div class="form-group">
+        <label for="purchase-instructions">Purchase instructions</label>
+        {{textarea value=purchase class="form-control" id="purchase-instructions"}}
+      </div>
+      <div class="form-group">
+        {{upload-image-button value=image}}
+      </div>
+      <button {{action "save"}} class="btn btn-primary submit-button">Submit</button>
+      <button {{action "cancel"}} class="btn btn-primary cancel-button">Cancel</button>
+    </div>
+  {{/unless}}
+</div>

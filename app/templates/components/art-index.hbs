@@ -6,7 +6,9 @@
         <div class="image-index-thumbnail thumbnail">
           <img src="{{img.thumbnail.url}}" alt="" {{action openGallery index}} />
           <div class="caption">
-            <h4><strong>{{img.title}}</strong></h4>
+            {{#link-to 'art.show' img.objectId}}
+              <h4><strong>{{img.title}}</strong></h4>
+            {{/link-to}}
             {{img.caption}}
             <p class="text-muted">{{img.category}}</p>
           </div>
