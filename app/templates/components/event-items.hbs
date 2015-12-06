@@ -1,11 +1,11 @@
 <div class="row">
   {{#if session.isAuthenticated}}
-    {{#each model.current as |event|}}
+    {{#each current as |event|}}
       {{event-item model=event on-destroy=(action 'destroy')}}
     {{/each}}
   {{else}}
     {{#masonry-grid}}
-      {{#each model.current as |event|}}
+      {{#each current as |event|}}
         {{event-item model=event on-destroy=(action 'destroy')}}
       {{/each}}
     {{/masonry-grid}}
