@@ -28,6 +28,26 @@ h3.index-thumbnail-captions:hover {
   margin-top: 10px;
 }
 
+/* Tattoo index jumbotron */
+.tattoo-index-jumbotron {
+  background-image: url(../images/JJ-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #ffffff;
+  height: 350px;
+
+  @media (max-width: 700px) {
+    height: 200px;
+  }
+
+  @media (max-width: 600px) {
+    height: 150px;
+  }
+
+  @media (max-width: 400px){
+    height: 125px;
+  }
+}
 
 /* Index of images on tattoo and art pages */
 
