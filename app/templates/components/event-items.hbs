@@ -1,9 +1,16 @@
 <div class="row">
-  {{#masonry-grid}}
+  {{#if session.isAuthenticated}}
     {{#each model.current as |event|}}
       {{event-item event=event}}
     {{/each}}
-  {{/masonry-grid}}
+  {{else}}
+    {{#masonry-grid}}
+      {{#each model.current as |event|}}
+        {{event-item event=event}}
+      {{/each}}
+    {{/masonry-grid}}
+  {{/if}}
+
 {{!--
   <hr />
   <h1>Past Events</h1>
