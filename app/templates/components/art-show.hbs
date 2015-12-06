@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 image-show">
+    <img src="{{invoke (g model 'image') 'url'}}" alt="" class="image-show-img"/>
+    <div class="caption image-show-caption">
+      <h4>{{g model 'title'}}</h4>
+      <p>{{g model 'caption'}}</p>
+      <h5>{{g model 'category'}}</h5>
+      {{#if session.isAuthenticated}}
+        {{#if isEditing}}
+          <div class="form-group">
+            <label for="art-name">Image Name</label>
+            {{input type=text value=title class="form-control" id="art-name"}}
+          </div>
+          <div class="form-group">
+            <label for="art-caption">Caption</label>
+            {{textarea rows=3 value=caption class="form-control" id="art-caption"}}
+          </div>
+          <div class="form-group">
+            {{upload-image-button value=image}}
+          </div>
+          <div class="form-group">
+            <label>Category:</label>
+            {{log category}}
+            {{#x-select value=category class="form-control" name="art-categories"}}
+              <option>Select a Category</option>
+              {{#x-option value="Subway Paintings"}}Subway Paintings{{/x-option}}
+              {{#x-option value="Temporary Permanence"}}Temporary Permanence{{/x-option}}
+              {{#x-option value="Masks"}}Masks{{/x-option}}
+              {{#x-option value="The Pile Project"}}The Pile Project{{/x-option}}
+              {{#x-option value="Artistic Identity"}}Artistic Identity{{/x-option}}
+              {{#x-option value="Other Paintings"}}Other Paintings{{/x-option}}
+              {{#x-option value="Other Drawings"}}Other Drawings{{/x-option}}
+            {{/x-select}}
+          </div>
+          <button {{action "save"}} class="btn btn-primary submit-button">Submit</button>
+          <button {{action "cancel"}} class="btn btn-primary cancel-button">Cancel</button>
+        {{else}}
+          <p class="btn btn-primary" role="button" {{action "edit"}}>Edit</p>
+          <p class="btn btn-primary" role="button" {{action "destroy"}}>Delete</p>
+        {{/if}}
+      {{/if}}
+    </div>
+
+  </div>
+</div>

@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     var imageInput = this.$('input[type=file]')[0];
     if(imageInput.files.length > 0) {
       var image = new Parse.Object('Art');
-      image.set(this.getProperties('name', 'caption', 'category'));
+      image.set(this.getProperties('title', 'caption', 'category'));
       var file = imageInput.files[0];
       var imageFile = new Parse.File(image.name, file);
       imageFile.save().then(() => {
@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         return image.save();
       }, (error) => {
         console.error(error);
-      }.bind(this));
+      });
     }
     this.set("isHidden", true);
   },

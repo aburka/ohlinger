@@ -25,6 +25,7 @@ Router.map(function() {
     this.route('artistic-identity');
     this.route('other-paintings');
     this.route('other-drawings');
+    this.route('show', {path: ':objectId'});
   });
   this.route('store');
   this.route('about', function() {
