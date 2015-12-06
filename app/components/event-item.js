@@ -50,7 +50,7 @@ export default Ember.Component.extend({
     },
 
     deleteEvent() {
-      this.get('onDestroy')(this.get('model'));
+      this.get('on-destroy')(this.get('model'));
     }
   }
 });

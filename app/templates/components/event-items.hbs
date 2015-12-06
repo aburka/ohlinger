@@ -1,31 +1,13 @@
 <div class="row">
   {{#if session.isAuthenticated}}
     {{#each model.current as |event|}}
-      {{event-item event=event}}
+      {{event-item model=event on-destroy=(action 'destroy')}}
     {{/each}}
   {{else}}
     {{#masonry-grid}}
       {{#each model.current as |event|}}
-        {{event-item event=event}}
+        {{event-item model=event on-destroy=(action 'destroy')}}
       {{/each}}
     {{/masonry-grid}}
   {{/if}}
-
-{{!--
-  <hr />
-  <h1>Past Events</h1>
-  {{#masonry-grid}}
-    {{#each model.past as |event|}}
-      <div class="col-sm-6 col-md-2">
-        <div class="thumbnail">
-          <img src="{{event.thumbnail.url}}">
-          <div class="caption">
-            <h2>{{event.title}}</h2>
-            <p>{{date-range event.start_date.iso event.end_date.iso}}</p>
-            <p>{{event.description}}</p>
-          </div>
-        </div>
-      </div>
-    {{/each}}
-  {{/masonry-grid}} --}}
 </div>
