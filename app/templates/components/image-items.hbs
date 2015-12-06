@@ -6,7 +6,7 @@
         <div class="image-index-thumbnail thumbnail">
           <img src="{{img.thumbnail.url}}" alt="" {{action openGallery index}} />
           <div class="caption">
-            {{#link-to 'tattoo.show' img}}
+            {{#link-to 'tattoo.show' img.objectId}}
               <h4><strong>{{img.title}}</strong></h4>
             {{/link-to}}
             {{img.caption}}

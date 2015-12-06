@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2 image-show">
-    <img src="{{model.image.url}}" alt="" class="image-show-img"/>
+    <img src="{{invoke (g model 'image') 'url'}}" alt="" class="image-show-img"/>
     <div class="caption image-show-caption">
-      <h4>{{model.title}}</h4>
-      <p>{{model.caption}}</p>
+      <h4>{{g model 'title'}}</h4>
+      <p>{{g model 'caption'}}</p>
       <p class="image-tag">
         <ul class="image-show-tags">
-          {{#each model.tags as |tag|}}
+          {{#each (g model 'tags') as |tag|}}
             <li class="image-tag text-muted">{{#link-to 'tattoo.tags.show' tag}}{{tag}}{{/link-to}}</li>
           {{/each}}
         </ul>

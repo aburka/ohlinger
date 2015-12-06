@@ -1,0 +1,12 @@
+{{#if value.url}}
+  <img class="upload-image-button-thumbnail" src="{{invoke value 'url'}}" alt="">
+{{/if}}
+<button class="btn" disabled={{isUploading}} {{action "loadFile"}}>
+  {{#if isUploading}}
+    Uploading...
+  {{else}}
+    Upload new image
+  {{/if}}
+</button>
+
+<input type="file" class="upload-image-button-input" data-behavior="hidden-file-input" {{action "uploadImage" on="change"}}>
