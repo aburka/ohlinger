@@ -21,7 +21,6 @@ Router.map(function() {
     this.route('subway-paintings');
     this.route('temporary-permanence');
     this.route('animals');
-    this.route('pile-project');
     this.route('portraits');
     this.route('other-paintings');
     this.route('other-drawings');
