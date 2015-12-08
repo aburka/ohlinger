@@ -59,7 +59,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/tattoo/';
+    ENV.baseURL = 'http://ohlingerpets.com/tattoo/';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
