@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+const props = ['title', 'start_date', 'end_date', 'description'];
+
 export default Ember.Component.extend({
   tagName: 'form',
 
@@ -8,7 +10,8 @@ export default Ember.Component.extend({
     var imageInput = this.$('input[type=file]')[0];
     if(imageInput.files.length > 0) {
       var image = new Parse.Object('Event');
-      image.set(this.getProperties('title', 'start_date', 'end_date', 'description'));
+      image.set(this.getProperties(props));
+      props.forEach((p) => this.set(p, null));
       var file = imageInput.files[0];
       var imageFile = new Parse.File(image.name, file);
       imageFile.save().then(() => {
@@ -16,7 +19,7 @@ export default Ember.Component.extend({
         return image.save();
       }, (error) => {
         console.error(error);
-      }.bind(this));
+      });
     }
     this.set('isHidden', true);
   },
