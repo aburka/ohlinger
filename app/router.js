@@ -20,9 +20,9 @@ Router.map(function() {
   this.route('art', function() {
     this.route('subway-paintings');
     this.route('temporary-permanence');
-    this.route('masks');
+    this.route('animals');
     this.route('pile-project');
-    this.route('artistic-identity');
+    this.route('portraits');
     this.route('other-paintings');
     this.route('other-drawings');
     this.route('show', {path: ':objectId'});
