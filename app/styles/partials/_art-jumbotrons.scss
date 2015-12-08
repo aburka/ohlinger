@@ -1,0 +1,39 @@
+.art-animals-jumbotron {
+  background-image: url(../images/art/animals.jpg);
+}
+
+.art-paintings-jumbotron {
+  background-image: url(../images/art/paintings.jpg);
+}
+
+.art-temporary-jumbotron {
+  background-image: url(../images/art/temporary.jpg);
+}
+
+.art-drawings-jumbotron {
+  background-image: url(../images/art/drawings.jpg);
+}
+
+.art-portraits-jumbotron {
+  background-image: url(../images/art/portraits.jpg);
+}
+
+.art-subway-jumbotron {
+  background-image: url(../images/art/subway.jpg);
+}
+
+.art-pile-jumbotron {
+  background-image: url(../images/art/pile.jpg);
+}
+
+.art-animals-jumbotron,
+.art-paintings-jumbotron,
+.art-temporary-jumbotron,
+.art-drawings-jumbotron,
+.art-portraits-jumbotron,
+.art-subway-jumbotron,
+.art-pile-jumbotron{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #ffffff;
+}
