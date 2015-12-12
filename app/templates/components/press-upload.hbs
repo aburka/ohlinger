@@ -1,0 +1,33 @@
+{{#if isHidden}}
+  <h2 {{action "openUpload"}} class="upload-header"><i class="fa fa-plus"></i> Add a New Article</h2>
+  <hr>
+{{else}}
+  <h2 {{action "cancelUpload"}} class="upload-header"><i class="fa fa-times"></i> Add a New Article</h2>
+  <div class="upload-press">
+    <div class="form-group">
+      <label for="press-title">Title</label>
+      {{input value=title class="form-control" id="press-title"}}
+    </div>
+    <div class="form-group">
+      <label for="press-url">Link</label>
+      {{input value=url class="form-control" id="press-url"}}
+    </div>
+    <div class="form-group">
+      <label for="press-url-title">Link Title</label>
+      {{input value=url_title class="form-control" id="press-url-title"}}
+    </div>
+    <div class="form-group">
+      <label for="press-description">Description</label>
+      {{textarea value=description class="form-control" id="press-description"}}
+    </div>
+    <div class="form-group">
+      <label for="product-image-file">Attach An Image</label>
+      {{input type="file" value=file class="form-control" id="product-image-file"}}
+    </div>
+    <button class="btn btn-primary submit-button">Submit</button>
+    <button {{action "cancelUpload"}} class="btn btn-primary cancel-button">Cancel</button>
+    <hr>
+  </div>
+{{/if}}
+
+{{yield}}

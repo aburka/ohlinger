@@ -1,0 +1,22 @@
+.press-item {
+   padding: 10px 0;
+}
+
+.press-item::before {
+  content: '';
+  height: 1px;
+  background-color: rgba(225, 225, 225, 0.5);
+  display: block;
+  margin-bottom: 25px;
+}
+
+.press-item:first-of-type::before{
+  content: '';
+  height: 1px;
+  background-color: rgba(225, 225, 225, 0.5);
+  display: block;
+}
+
+.press-thumbnail{
+  width: 150px;
+}

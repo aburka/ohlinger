@@ -1,0 +1,52 @@
+{{#if (g model 'image')}}
+  <div class="col-sm-1 col-md-2">
+    <img class="press-thumbnail" src="{{invoke (g model 'image') 'url'}}" alt="{{g model 'title'}}">
+  </div>
+  <div class="col-sm-11 col-md-10">
+    <h3 class="media-heading">{{g model 'title'}}</h3>
+    <p>{{{g model 'description'}}}</p>
+    <p><u><a href="{{g model 'url'}}">{{g model 'url_title'}}</a></u></p>
+  </div>
+{{else}}
+  <div class="col-sm-12 col-md-12">
+    <h3 class="media-heading">{{g model 'title'}}</h3>
+    <p>{{{g model 'description'}}}</p>
+    <p><u><a href="{{g model 'url'}}">{{g model 'url_title'}}</a></u></p>
+  </div>
+{{/if}}
+
+<div class="col-sm-12 col-md-6">
+  {{#if session.isAuthenticated}}
+    {{#if isHidden}}
+      <p class="btn btn-primary" role="button" {{action "showEdit"}}>Edit</p>
+      <p class="btn btn-primary" role="button" {{action "deletePress"}}>Delete</p>
+    {{else}}
+      <div class="edit press">
+        <div class="form-group">
+          <label for="press-title">Title</label>
+          {{input value=title class="form-control" id="press-title"}}
+        </div>
+        <div class="form-group">
+          <label for="press-url">Link</label>
+          {{input value=url class="form-control" id="press-url"}}
+        </div>
+        <div class="form-group">
+          <label for="press-url-title">Link Title</label>
+          {{input value=url_title class="form-control" id="press-url-title"}}
+        </div>
+        <div class="form-group">
+          <label for="press-description">Description</label>
+          {{textarea value=description class="form-control" id="press-description"}}
+        </div>
+        <div class="form-group">
+          <label for="product-image-file">Attach An Image</label>
+          {{input type="file" value=file class="form-control" id="product-image-file"}}
+        </div>
+        <button class="btn btn-primary submit-button" {{action "savePress"}}>Submit</button>
+        <button {{action "cancelEdit"}} class="btn btn-primary cancel-button">Cancel</button>
+      </div>
+    {{/if}}
+  {{/if}}
+</div>
+
+{{yield}}

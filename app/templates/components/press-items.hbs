@@ -1,0 +1,6 @@
+<h2>In The News</h2>
+{{#each model as |press|}}
+  {{press-item model=press on-destroy=(action 'destroy')}}
+{{/each}}
+
+{{yield}}
