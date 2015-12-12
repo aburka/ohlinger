@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const props = ['title', 'start_date', 'end_date', 'description'];
+const props = ['title', 'start_date', 'end_date', 'description', 'event_url_title', 'event_url'];
 
 export default Ember.Component.extend({
   tagName: 'form',

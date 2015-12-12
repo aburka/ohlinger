@@ -1,9 +1,11 @@
 <div class="thumbnail">
   <img src="{{invoke (g model 'image') 'url'}}">
   <div class="caption">
+    {{log g model 'event_url_title'}}
     <h2>{{g model 'title'}}</h2>
     <p>{{date-range (g model 'start_date') (g model 'end_date')}}</p>
     <p>{{g model 'description'}}</p>
+    <p><u><a href="{{g model 'event_url'}}">{{g model 'event_url_title'}}</a></u></p>
     {{#if session.isAuthenticated}}
       {{#if isHidden}}
         <p class="btn btn-primary" role="button" {{action "showEdit"}}>Edit</p>
@@ -25,6 +27,14 @@
           <div class="form-group">
             <label for="event-desc">Description</label>
             {{input type=text value=description format=dateFormatter class="form-control" id="event-desc"}}
+          </div>
+          <div class="form-group">
+            <label for="event-url-tile">Event URL Title</label>
+            {{input type=text value=event_url_title class="form-control" id="event-url-title"}}
+          </div>
+          <div class="form-group">
+            <label for="event-url">Event URL</label>
+            {{input type=text value=event_url class="form-control" id="event-url"}}
           </div>
           <div class="form-group">
             {{upload-image-button value=image}}
