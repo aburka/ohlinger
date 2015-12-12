@@ -5,12 +5,12 @@ export default Ember.Route.extend({
     var query = new Parse.Query('Image');
     return query.find().then(function(results) {
       var sortedResults = results.sort(function(a, b) {
-        if (a.updatedAt < b.updatedAt) {
-          return a;
+        if (a.updatedAt > b.updatedAt) {
+          return -1;
         } else if (a.updatedAt === b.updatedAt) {
-          return a;
+          return 0;
         } else {
-          return b;
+          return 1;
         }
       });
       return _.invoke(sortedResults, 'toJSON');
