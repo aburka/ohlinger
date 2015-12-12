@@ -11,10 +11,10 @@ export default Ember.Component.extend({
           "message": {
             "from_email": this.email,
             "from_name": this.name,
-            "text": this.comments,
+            "text": "Name: " + this.name + "Email: " + this.email + "Phone: " + this.phone + "Comments: " + this.comments,
             "to": [
                 {
-                  "email": "jj@ohlinger.com",
+                  "email": "aburka@gmail.com",
                   "name": "JJ",
                   "type": "to"
                 },
