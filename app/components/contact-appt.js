@@ -14,7 +14,7 @@ export default Ember.Component.extend({
             "text": "Name: " + this.name + "Email: " + this.email + "Phone: " + this.phone + "Comments: " + this.comments,
             "to": [
                 {
-                  "email": "aburka@gmail.com",
+                  "email": "jj@ohlinger.com",
                   "name": "JJ",
                   "type": "to"
                 },
