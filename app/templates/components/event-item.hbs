@@ -1,11 +1,17 @@
 <div class="thumbnail">
   <img src="{{invoke (g model 'image') 'url'}}">
   <div class="caption">
-    {{log g model 'event_url_title'}}
     <h2>{{g model 'title'}}</h2>
     <p>{{date-range (g model 'start_date') (g model 'end_date')}}</p>
     <p>{{g model 'description'}}</p>
     <p><u><a href="{{g model 'event_url'}}">{{g model 'event_url_title'}}</a></u></p>
+
+    {{#if (g model 'appointments_available')}}
+      {{#link-to 'events.appointment' model.id }}
+        <p class="btn btn-primary btn-sm" role="button" {{action "showEdit"}}>Request an appointment for this event</p>
+      {{/link-to}}
+    {{/if}}
+
     {{#if session.isAuthenticated}}
       {{#if isHidden}}
         <p class="btn btn-primary" role="button" {{action "showEdit"}}>Edit</p>
@@ -38,6 +44,10 @@
           </div>
           <div class="form-group">
             {{upload-image-button value=image}}
+          </div>
+          <div class="form-group">
+            <label for="event-image-file">Appointments Available at this Event?</label>
+            {{input type="checkbox" name="appointments_available" checked=appointments_available id="event-appt" required=false}}
           </div>
           <button class="btn btn-primary submit-button" {{action "saveEvent"}}>Submit</button>
           <button {{action "cancelEdit"}} class="btn btn-primary cancel-button">Cancel</button>

@@ -34,7 +34,9 @@ Router.map(function() {
     this.route('contact');
     this.route('meet-jj');
   });
-  this.route('events');
+  this.route('events', function() {
+    this.route('appointment', {path: ':objectId'});
+  });
   this.route('admin', function() {
     this.route('upload');
   });

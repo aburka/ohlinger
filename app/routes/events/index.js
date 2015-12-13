@@ -5,5 +5,5 @@ export default Ember.Route.extend({
     var query = new Parse.Query("Event");
     query.addAscending('start_date');
     return query.find();
-  } 
+  }
 });

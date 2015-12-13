@@ -17,12 +17,24 @@
       {{bootstrap-datepicker value=end_date class="form-control" id="end-date"}}
     </div>
     <div class="form-group">
+      <label for="event-desc">Event Link</label>
+      {{input type=text value=event_url class="form-control" id="event-url"}}
+    </div>
+    <div class="form-group">
+      <label for="event-desc">Event Link Title</label>
+      {{input type=text value=event_url_title class="form-control" id="event-url-title"}}
+    </div>
+    <div class="form-group">
       <label for="event-desc">Description</label>
       {{input type=text value=description class="form-control" id="event-desc"}}
     </div>
     <div class="form-group">
       <label for="event-image-file">Attach An Image</label>
-      <input type="file" class="form-control" id="event-image-file">
+      <input type="file" class="form-control" id="event-image-file" required="false">
+    </div>
+    <div class="form-group">
+      <label for="event-image-file">Appointments Available at this Event?</label>
+      {{input type="checkbox" name="appointments_available" checked=appointments_available id="event-appt" required=false}}
     </div>
     <button class="btn btn-primary submit-button">Submit</button>
     <button {{action "cancelUpload"}} class="btn btn-primary cancel-button">Cancel</button>

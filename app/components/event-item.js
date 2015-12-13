@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const props = ['title', 'start_date', 'end_date', 'description', 'image'];
+const props = ['title', 'start_date', 'end_date', 'description', 'event_url_title', 'event_url', 'appointments_available'];
 
 export default Ember.Component.extend({
   classNames: ["col-xs-12 col-sm-3 col-md-4"],
