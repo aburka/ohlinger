@@ -4,7 +4,7 @@
     <div class="caption">
       <h2>{{g model 'title'}}</h2>
       <p>{{g model 'description'}}</p>
-      <p>To purchase: {{g model 'purchase'}}</p>
+      <p>To purchase: {{{g model 'purchase'}}}</p>
       <p class="text-muted">{{g model 'price'}}</p>
       {{#if session.isAuthenticated}}
         <p class="btn btn-primary" role="button" {{action "edit"}}>Edit</p>
