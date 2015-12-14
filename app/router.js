@@ -8,10 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('tattoo', function() {
     this.route('color');
-    this.route('illustration');
     this.route('black-and-grey');
-    this.route('dotwork');
-    this.route('realistic');
     this.route('show', {path: ':objectId'});
     this.route('tags', function() {
       this.route('show', {path: ':tag'});
