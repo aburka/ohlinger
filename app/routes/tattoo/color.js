@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     query.equalTo("category", "Color");
     return query.find().then(function(results) {
       var sortedResults = results.sort(function(a, b) {
-        if (a.updatedAt < b.updatedAt) {
+        if (a.updatedAt > b.updatedAt) {
           return -1;
         } else if (a.updatedAt === b.updatedAt) {
           return 0;
