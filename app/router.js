@@ -19,8 +19,7 @@ Router.map(function() {
     this.route('temporary-permanence');
     this.route('animals');
     this.route('portraits');
-    this.route('other-paintings');
-    this.route('other-drawings');
+    this.route('other-paintings-and-drawings');
     this.route('show', {path: ':objectId'});
   });
   this.route('store', function() {
