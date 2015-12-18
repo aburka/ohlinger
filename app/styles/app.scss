@@ -11,6 +11,12 @@ body {
   font-weight: 400;
 }
 
+h1 {
+  @media(max-width: 500px) {
+    font-size: 26px;
+  }
+}
+
 .app-container {
   max-width: 1150px;
   margin: 0 auto;
