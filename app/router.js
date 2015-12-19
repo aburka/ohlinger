@@ -26,7 +26,7 @@ Router.map(function() {
     this.route('show', {path: ':objectId'});
   });
   this.route('about', function() {
-    this.route('resume');
+    this.route('process');
     this.route('contact');
     this.route('meet-jj');
   });
