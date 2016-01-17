@@ -26,10 +26,17 @@ export default Ember.Component.extend({
           "headers": {
               "Reply-To": this.email
           }
+        },
+        success: () => {
+          alert("Thanks for getting in touch! Your request has been submitted.");
+          this.router.transitionTo('events');
+        },
+        error: function() {
+          alert("There was a problem processing your request. Please try again.");
         }
-      }).done(function(response) {
-         alert("Thanks for getting in touch!");
       });
     }
   }
 });
+
+//
