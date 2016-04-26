@@ -6,8 +6,7 @@ export default Ember.Component.extend({
       var event = this.get('model').get('title');
       Parse.Cloud.run('sendEmail', {
         "from": `${this.name} <${this.email}>`,
-        "to": `JJ <jacob@jacobsmith.io>`,
-        // "to": `JJ <jj@ohlinger.com>`,
+        "to": `JJ <jj@ohlinger.com>`,
         "subject": "Ohlinger.com Event Appointment Inquiry",
         "text": `Name: ${this.name}\nEmail: ${this.email}\nPhone: ${this.phone}\nEvent: ${event}\nComments: ${this.comments}`
       }).then(() => {
