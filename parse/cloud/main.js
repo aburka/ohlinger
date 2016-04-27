@@ -34,3 +34,28 @@ Parse.Cloud.beforeSave("Image", processImage);
 Parse.Cloud.beforeSave("Shop", processImage);
 Parse.Cloud.beforeSave("Art", processImage);
 Parse.Cloud.beforeSave("Event", processImage);
+
+var Buffer = require('buffer').Buffer;
+function btoa(str) {
+  return new Buffer(str).toString('base64');
+}
+
+Parse.Cloud.define('sendEmail', function(request, response) {
+  return Parse.Cloud.httpRequest({
+    url: "https://api.mailgun.net/v3/mailgun.ohlinger.com/messages",
+    method: "POST",
+    headers: {
+      "Authorization": "Basic " + btoa("api:key-18036108de44e4c938a6e8f784b1849b")
+    },
+    body: {
+      from: request.params.from,
+      to: request.params.to,
+      subject: request.params.subject,
+      text: request.params.text,
+    }
+  }).then(function(httpResponse) {
+    response.success(httpResponse);
+  }, function(error) {
+    response.error(error);
+  });
+});
