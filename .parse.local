@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "ohlinger"
+    },
+    "ohlinger": {
+      "applicationId": "ZEnFPixpSlTvgyHxyxmsHtwmFg5HRNOZ2AhIxecm"
+    }
+  }
+}
