@@ -35,7 +35,6 @@ Parse.Cloud.beforeSave("Shop", processImage);
 Parse.Cloud.beforeSave("Art", processImage);
 Parse.Cloud.beforeSave("Event", processImage);
 
-var Buffer = require('buffer').Buffer;
 function btoa(str) {
   return new Buffer(str).toString('base64');
 }
