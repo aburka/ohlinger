@@ -1,4 +1,4 @@
-var Image = require("parse-image");
+var sizeOf = require('image-size');
 
 // Calculate image dimensions for front end optimization
 var processImage = function(request, response) {
@@ -13,16 +13,12 @@ var processImage = function(request, response) {
     url: imageObject.get('image').url()
   }).then(function(response) {
 
-    // grab the image contents from response.buffer
-    var image = new Image();
-
-    return image.setData(response.buffer);
-
-  }).then(function(image) {
+    // grab the image dimensions from response.buffer
+    var dimensions = sizeOf(response.buffer);
 
     // Save the original height and width for frontend use
-    imageObject.set('imageWidth', image.width());
-    imageObject.set('imageHeight', image.height());
+    imageObject.set('imageWidth', dimensions.width);
+    imageObject.set('imageHeight', dimensions.height);
     response.success();
   }, function(error) {
     response.error(error);
