@@ -17,7 +17,7 @@
     "parse-server-ftp-http-adapter": "^1.0.8"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node_modules/.bin/parse-server"
   },
   "engines": {
     "node": ">=4.3"
