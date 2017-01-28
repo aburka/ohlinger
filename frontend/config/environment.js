@@ -34,7 +34,7 @@ module.exports = function(environment) {
 
     Parse: {
       applicationId: 'ZEnFPixpSlTvgyHxyxmsHtwmFg5HRNOZ2AhIxecm',
-      jsKey: 'WmwYp0CYRN1fCQK9nLqy9GvSSryZfDPAborMEE1v'
+      serverURL: 'http://ohlinger.herokuapp.com/parse'
     }
   };
 
@@ -44,6 +44,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.Parse.serverURL = 'http://localhost:1337/parse';
+    ENV.Parse.applicationId = 'myAppId';
   }
 
   if (environment === 'test') {
