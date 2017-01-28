@@ -13,7 +13,7 @@ module.exports = function(defaults) {
     app.import(app.bowerDirectory + '/moment/moment.js');
     app.import(app.bowerDirectory + '/underscore/underscore.js');
 
-    app.import('vendor/parse-1.6.7.min.js');
+    app.import('vendor/parse-1.9.2.js');
 
     return app.toTree();
 };
