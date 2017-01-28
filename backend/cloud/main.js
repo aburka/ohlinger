@@ -11,17 +11,17 @@ var processImage = function(request, response) {
 
   Parse.Cloud.httpRequest({
     url: imageObject.get('image').url()
-  }).then(function(response) {
+  }).then(function(imageResponse) {
 
     // grab the image dimensions from response.buffer
-    var dimensions = sizeOf(response.buffer);
+    var dimensions = sizeOf(imageResponse.buffer);
 
     // Save the original height and width for frontend use
     imageObject.set('imageWidth', dimensions.width);
     imageObject.set('imageHeight', dimensions.height);
     response.success();
   }, function(error) {
-    response.error(error);
+    response.error(JSON.stringify(error, null, 4));
   });
 
 }
@@ -51,6 +51,6 @@ Parse.Cloud.define('sendEmail', function(request, response) {
   }).then(function(httpResponse) {
     response.success(httpResponse);
   }, function(error) {
-    response.error(error);
+    response.error(JSON.stringify(error, null, 4));
   });
 });
