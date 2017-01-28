@@ -14,7 +14,7 @@ var api = new ParseServer({
   cloud:        process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId:        process.env.APP_ID          || 'myAppId',
   masterKey:    process.env.MASTER_KEY      || 'myMasterKey',
-  fileKey:      process.env.FILE_KEY
+  fileKey:      process.env.FILE_KEY,
   serverURL:    process.env.SERVER_URL      || 'http://localhost:1337/parse',
   filesAdapter: new FtpHttpAdapter({
     ftp: {
