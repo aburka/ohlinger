@@ -34,7 +34,7 @@ module.exports = function(environment) {
 
     Parse: {
       applicationId: 'ZEnFPixpSlTvgyHxyxmsHtwmFg5HRNOZ2AhIxecm',
-      serverURL: 'http://ohlinger.herokuapp.com/parse'
+      serverURL: 'http://ohlinger.herokuapp.com'
     }
   };
 
@@ -44,7 +44,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.Parse.serverURL = 'http://localhost:1337/parse';
+    ENV.Parse.serverURL = 'http://localhost:1337';
     ENV.Parse.applicationId = 'myAppId';
   }
 
@@ -61,7 +61,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/tattoo/';
     ENV.locationType = 'hash';
   }
 
