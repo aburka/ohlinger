@@ -1,4 +1,4 @@
-var Image = require("parse-image");
+var sizeOf = require('image-size');
 
 // Calculate image dimensions for front end optimization
 var processImage = function(request, response) {
@@ -11,21 +11,17 @@ var processImage = function(request, response) {
 
   Parse.Cloud.httpRequest({
     url: imageObject.get('image').url()
-  }).then(function(response) {
+  }).then(function(imageResponse) {
 
-    // grab the image contents from response.buffer
-    var image = new Image();
-
-    return image.setData(response.buffer);
-
-  }).then(function(image) {
+    // grab the image dimensions from response.buffer
+    var dimensions = sizeOf(imageResponse.buffer);
 
     // Save the original height and width for frontend use
-    imageObject.set('imageWidth', image.width());
-    imageObject.set('imageHeight', image.height());
+    imageObject.set('imageWidth', dimensions.width);
+    imageObject.set('imageHeight', dimensions.height);
     response.success();
   }, function(error) {
-    response.error(error);
+    response.error(JSON.stringify(error, null, 4));
   });
 
 }
@@ -35,7 +31,6 @@ Parse.Cloud.beforeSave("Shop", processImage);
 Parse.Cloud.beforeSave("Art", processImage);
 Parse.Cloud.beforeSave("Event", processImage);
 
-var Buffer = require('buffer').Buffer;
 function btoa(str) {
   return new Buffer(str).toString('base64');
 }
@@ -56,6 +51,6 @@ Parse.Cloud.define('sendEmail', function(request, response) {
   }).then(function(httpResponse) {
     response.success(httpResponse);
   }, function(error) {
-    response.error(error);
+    response.error(JSON.stringify(error, null, 4));
   });
 });

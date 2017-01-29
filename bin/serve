@@ -1,0 +1,18 @@
+#!/bin/bash
+export PARSE_SERVER_DATABASE_URI="mongodb://localhost/ohlinger"
+export PARSE_SERVER_APPLICATION_ID="myAppId"
+export PARSE_SERVER_MASTER_KEY="myMasterKey"
+export PARSE_SERVER_URL="http://localhost"
+export PARSE_SERVER_MOUNT_PATH="/"
+
+export PARSE_SERVER_FILES_ADAPTER="parse-server-ftp-http-adapter"
+
+export PARSE_SERVER_FILES_FTP_HOST="localhost"
+export PARSE_SERVER_FILES_FTP_PORT="58568"
+export PARSE_SERVER_FILES_FTP_PATH="/example.com/uploads"
+export PARSE_SERVER_FILES_HTTP_HOST="http://localhost"
+export PARSE_SERVER_FILES_HTTP_PORT="58569"
+export PARSE_SERVER_FILES_HTTP_PATH="/uploads"
+export VERBOSE="1"
+cd backend
+parse-server
