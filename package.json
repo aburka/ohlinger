@@ -14,7 +14,7 @@
     "kerberos": "~0.0.x",
     "parse": "*",
     "parse-server": "*",
-    "parse-server-ftp-http-adapter": "^1.0.8"
+    "parse-server-ftp-http-adapter": "^1.0.10"
   },
   "scripts": {
     "start": "node_modules/.bin/parse-server"
