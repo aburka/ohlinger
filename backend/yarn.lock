@@ -1361,9 +1361,9 @@ parse-server-fs-adapter@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parse-server-fs-adapter/-/parse-server-fs-adapter-1.0.1.tgz#faa4b4be56612a5673ef3dd842eb55b7e1f30dba"
 
-parse-server-ftp-http-adapter@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/parse-server-ftp-http-adapter/-/parse-server-ftp-http-adapter-1.0.8.tgz#bb50ea1490a3264b3c42d109fbca739f8eba8321"
+parse-server-ftp-http-adapter@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/parse-server-ftp-http-adapter/-/parse-server-ftp-http-adapter-1.0.10.tgz#9e14aa009262a1746884da5abbc39174bda1e968"
   dependencies:
     ftp "^0.3.10"
     lodash "^4.17.4"
