@@ -4,6 +4,7 @@ export PARSE_SERVER_APPLICATION_ID="myAppId"
 export PARSE_SERVER_MASTER_KEY="myMasterKey"
 export PARSE_SERVER_URL="http://localhost"
 export PARSE_SERVER_MOUNT_PATH="/"
+export PARSE_SERVER_CLOUD_CODE_MAIN="./cloud/main"
 
 export PARSE_SERVER_FILES_ADAPTER="parse-server-ftp-http-adapter"
 
@@ -15,4 +16,4 @@ export PARSE_SERVER_FILES_HTTP_PORT="58569"
 export PARSE_SERVER_FILES_HTTP_PATH="/uploads"
 export VERBOSE="1"
 cd backend
-parse-server
+./node_modules/.bin/parse-server
