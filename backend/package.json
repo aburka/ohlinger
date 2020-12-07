@@ -20,6 +20,6 @@
     "start": "node_modules/.bin/parse-server"
   },
   "engines": {
-    "node": "4.8.4"
+    "node": "15.1.0"
   }
 }
