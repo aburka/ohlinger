@@ -12,7 +12,7 @@
     "@node-rs/bcrypt": "^0.5.0",
     "express": "~4.11.x",
     "image-size": "^0.5.0",
-    "kerberos": "~0.0.x",
+    "kerberos": "~1.0.x",
     "parse": "*",
     "parse-server": "~4.x",
     "parse-server-ftp-http-adapter": "^1.0.10"
