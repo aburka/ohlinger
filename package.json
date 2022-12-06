@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@node-rs/bcrypt": "^0.5.0",
-    "express": "~4.11.x",
+    "express": "~4.17.x",
     "image-size": "^0.5.0",
     "kerberos": "~0.0.x",
     "parse": "*",
